@@ -1,0 +1,879 @@
+|ULA
+A[0] => ComponenteLogico:l0.Ai
+A[1] => ComponenteLogico:l1.Ai
+A[2] => ComponenteLogico:l2.Ai
+A[3] => ComponenteLogico:l3.Ai
+A[4] => ComponenteLogico:l4.Ai
+A[5] => ComponenteLogico:l5.Ai
+A[6] => ComponenteLogico:l6.Ai
+A[7] => ComponenteLogico:l7.Ai
+A[8] => ComponenteLogico:l8.Ai
+A[9] => ComponenteLogico:l9.Ai
+A[10] => ComponenteLogico:l10.Ai
+A[11] => ComponenteLogico:l11.Ai
+A[12] => ComponenteLogico:l12.Ai
+A[13] => ComponenteLogico:l13.Ai
+A[14] => ComponenteLogico:l14.Ai
+A[15] => ComponenteLogico:l15.Ai
+B[0] => ComponenteLogico:l0.Bi
+B[1] => ComponenteLogico:l1.Bi
+B[2] => ComponenteLogico:l2.Bi
+B[3] => ComponenteLogico:l3.Bi
+B[4] => ComponenteLogico:l4.Bi
+B[5] => ComponenteLogico:l5.Bi
+B[6] => ComponenteLogico:l6.Bi
+B[7] => ComponenteLogico:l7.Bi
+B[8] => ComponenteLogico:l8.Bi
+B[9] => ComponenteLogico:l9.Bi
+B[10] => ComponenteLogico:l10.Bi
+B[11] => ComponenteLogico:l11.Bi
+B[12] => ComponenteLogico:l12.Bi
+B[13] => ComponenteLogico:l13.Bi
+B[14] => ComponenteLogico:l14.Bi
+B[15] => ComponenteLogico:l15.Bi
+M => ComponenteLogico:l0.Mi
+M => ComponenteLogico:l1.Mi
+M => ComponenteLogico:l2.Mi
+M => ComponenteLogico:l3.Mi
+M => ComponenteLogico:l4.Mi
+M => ComponenteLogico:l5.Mi
+M => ComponenteLogico:l6.Mi
+M => ComponenteLogico:l7.Mi
+M => ComponenteLogico:l8.Mi
+M => ComponenteLogico:l9.Mi
+M => ComponenteLogico:l10.Mi
+M => ComponenteLogico:l11.Mi
+M => ComponenteLogico:l12.Mi
+M => ComponenteLogico:l13.Mi
+M => ComponenteLogico:l14.Mi
+M => ComponenteLogico:l15.Mi
+M => Cin.IN0
+M => des.IN0
+M => des.IN0
+S1 => des.IN1
+S1 => des.IN1
+S1 => ComponenteLogico:l0.S1i
+S1 => ComponenteLogico:l1.S1i
+S1 => ComponenteLogico:l2.S1i
+S1 => ComponenteLogico:l3.S1i
+S1 => ComponenteLogico:l4.S1i
+S1 => ComponenteLogico:l5.S1i
+S1 => ComponenteLogico:l6.S1i
+S1 => ComponenteLogico:l7.S1i
+S1 => ComponenteLogico:l8.S1i
+S1 => ComponenteLogico:l9.S1i
+S1 => ComponenteLogico:l10.S1i
+S1 => ComponenteLogico:l11.S1i
+S1 => ComponenteLogico:l12.S1i
+S1 => ComponenteLogico:l13.S1i
+S1 => ComponenteLogico:l14.S1i
+S1 => ComponenteLogico:l15.S1i
+S1 => Cin.IN1
+S0 => Cin.IN1
+S0 => des[1].IN1
+S0 => ComponenteLogico:l0.S0i
+S0 => ComponenteLogico:l1.S0i
+S0 => ComponenteLogico:l2.S0i
+S0 => ComponenteLogico:l3.S0i
+S0 => ComponenteLogico:l4.S0i
+S0 => ComponenteLogico:l5.S0i
+S0 => ComponenteLogico:l6.S0i
+S0 => ComponenteLogico:l7.S0i
+S0 => ComponenteLogico:l8.S0i
+S0 => ComponenteLogico:l9.S0i
+S0 => ComponenteLogico:l10.S0i
+S0 => ComponenteLogico:l11.S0i
+S0 => ComponenteLogico:l12.S0i
+S0 => ComponenteLogico:l13.S0i
+S0 => ComponenteLogico:l14.S0i
+S0 => ComponenteLogico:l15.S0i
+S0 => des[0].IN1
+Cin <> Cin
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[0] <= deslocador:shift.SAIDA[0]
+SAIDA[1] <= deslocador:shift.SAIDA[1]
+SAIDA[2] <= deslocador:shift.SAIDA[2]
+SAIDA[3] <= deslocador:shift.SAIDA[3]
+SAIDA[4] <= deslocador:shift.SAIDA[4]
+SAIDA[5] <= deslocador:shift.SAIDA[5]
+SAIDA[6] <= deslocador:shift.SAIDA[6]
+SAIDA[7] <= deslocador:shift.SAIDA[7]
+SAIDA[8] <= deslocador:shift.SAIDA[8]
+SAIDA[9] <= deslocador:shift.SAIDA[9]
+SAIDA[10] <= deslocador:shift.SAIDA[10]
+SAIDA[11] <= deslocador:shift.SAIDA[11]
+SAIDA[12] <= deslocador:shift.SAIDA[12]
+SAIDA[13] <= deslocador:shift.SAIDA[13]
+SAIDA[14] <= deslocador:shift.SAIDA[14]
+SAIDA[15] <= deslocador:shift.SAIDA[15]
+
+
+|ULA|ComponenteLogico:l0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o0
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l1
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o1
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l2
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o2
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l3
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o3
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l4
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o4
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l5
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o5
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l6
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o6
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l7
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o7
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l8
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o8
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l9
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o9
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l10
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o10
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l11
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o11
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l12
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o12
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l13
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o13
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l14
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o14
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|ComponenteLogico:l15
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|FA:o15
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA|deslocador:shift
+ENTRA[0] => Mux14.IN3
+ENTRA[0] => Mux15.IN2
+ENTRA[0] => Mux15.IN3
+ENTRA[1] => Mux13.IN3
+ENTRA[1] => Mux14.IN1
+ENTRA[1] => Mux14.IN2
+ENTRA[1] => Mux15.IN1
+ENTRA[2] => Mux12.IN3
+ENTRA[2] => Mux13.IN1
+ENTRA[2] => Mux13.IN2
+ENTRA[2] => Mux14.IN0
+ENTRA[3] => Mux11.IN3
+ENTRA[3] => Mux12.IN1
+ENTRA[3] => Mux12.IN2
+ENTRA[3] => Mux13.IN0
+ENTRA[4] => Mux10.IN3
+ENTRA[4] => Mux11.IN1
+ENTRA[4] => Mux11.IN2
+ENTRA[4] => Mux12.IN0
+ENTRA[5] => Mux9.IN3
+ENTRA[5] => Mux10.IN1
+ENTRA[5] => Mux10.IN2
+ENTRA[5] => Mux11.IN0
+ENTRA[6] => Mux8.IN3
+ENTRA[6] => Mux9.IN1
+ENTRA[6] => Mux9.IN2
+ENTRA[6] => Mux10.IN0
+ENTRA[7] => Mux7.IN3
+ENTRA[7] => Mux8.IN1
+ENTRA[7] => Mux8.IN2
+ENTRA[7] => Mux9.IN0
+ENTRA[8] => Mux6.IN3
+ENTRA[8] => Mux7.IN1
+ENTRA[8] => Mux7.IN2
+ENTRA[8] => Mux8.IN0
+ENTRA[9] => Mux5.IN3
+ENTRA[9] => Mux6.IN1
+ENTRA[9] => Mux6.IN2
+ENTRA[9] => Mux7.IN0
+ENTRA[10] => Mux4.IN3
+ENTRA[10] => Mux5.IN1
+ENTRA[10] => Mux5.IN2
+ENTRA[10] => Mux6.IN0
+ENTRA[11] => Mux3.IN3
+ENTRA[11] => Mux4.IN1
+ENTRA[11] => Mux4.IN2
+ENTRA[11] => Mux5.IN0
+ENTRA[12] => Mux2.IN3
+ENTRA[12] => Mux3.IN1
+ENTRA[12] => Mux3.IN2
+ENTRA[12] => Mux4.IN0
+ENTRA[13] => Mux1.IN3
+ENTRA[13] => Mux2.IN1
+ENTRA[13] => Mux2.IN2
+ENTRA[13] => Mux3.IN0
+ENTRA[14] => Mux0.IN3
+ENTRA[14] => Mux1.IN1
+ENTRA[14] => Mux1.IN2
+ENTRA[14] => Mux2.IN0
+ENTRA[15] => Mux0.IN1
+ENTRA[15] => Mux0.IN2
+ENTRA[15] => Mux1.IN0
+DESLOCA[0] => Mux0.IN5
+DESLOCA[0] => Mux1.IN5
+DESLOCA[0] => Mux2.IN5
+DESLOCA[0] => Mux3.IN5
+DESLOCA[0] => Mux4.IN5
+DESLOCA[0] => Mux5.IN5
+DESLOCA[0] => Mux6.IN5
+DESLOCA[0] => Mux7.IN5
+DESLOCA[0] => Mux8.IN5
+DESLOCA[0] => Mux9.IN5
+DESLOCA[0] => Mux10.IN5
+DESLOCA[0] => Mux11.IN5
+DESLOCA[0] => Mux12.IN5
+DESLOCA[0] => Mux13.IN5
+DESLOCA[0] => Mux14.IN5
+DESLOCA[0] => Mux15.IN5
+DESLOCA[1] => Mux0.IN4
+DESLOCA[1] => Mux1.IN4
+DESLOCA[1] => Mux2.IN4
+DESLOCA[1] => Mux3.IN4
+DESLOCA[1] => Mux4.IN4
+DESLOCA[1] => Mux5.IN4
+DESLOCA[1] => Mux6.IN4
+DESLOCA[1] => Mux7.IN4
+DESLOCA[1] => Mux8.IN4
+DESLOCA[1] => Mux9.IN4
+DESLOCA[1] => Mux10.IN4
+DESLOCA[1] => Mux11.IN4
+DESLOCA[1] => Mux12.IN4
+DESLOCA[1] => Mux13.IN4
+DESLOCA[1] => Mux14.IN4
+DESLOCA[1] => Mux15.IN4
+SAIDA[0] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[1] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[2] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[3] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[4] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[5] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[6] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[7] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[8] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[9] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[10] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[11] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[12] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[13] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

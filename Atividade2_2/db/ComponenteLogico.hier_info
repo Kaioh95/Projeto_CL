@@ -1,0 +1,28 @@
+|ComponenteLogico
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Ai => Xi.IN0
+Bi => Xi.IN0
+Bi => Xi.IN0
+Bi => Yi.IN0
+Bi => Xi.IN1
+Bi => Yi.IN0
+Mi => Xi.IN1
+Mi => Xi.IN1
+Mi => Yi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Xi.IN1
+S1i => Yi.IN1
+S1i => Yi.IN1
+S0i => Xi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+S0i => Xi.IN1
+S0i => Yi.IN1
+Xi <= Xi.DB_MAX_OUTPUT_PORT_TYPE
+Yi <= Yi.DB_MAX_OUTPUT_PORT_TYPE
+
+

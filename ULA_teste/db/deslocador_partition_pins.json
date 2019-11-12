@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SAIDA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DESLOCA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DESLOCA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTRA[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

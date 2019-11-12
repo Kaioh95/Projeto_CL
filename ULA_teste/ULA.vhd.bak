@@ -1,0 +1,100 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ULA is
+	port(
+		A, B: in std_logic_vector (15 downto 0);
+		M, S1, S0: in std_logic;
+		Cin: inout std_logic;
+		Cout: out std_logic;
+		SAIDA: out std_logic_vector (15 downto 0)
+	);
+end ULA;
+
+architecture arch of ULA is
+
+component ComponenteLogico
+	port(
+		Ai, Bi: in std_logic;
+		Mi, S1i, S0i: in std_logic;
+		Xi, Yi: out std_logic
+	);
+end component;
+
+component FA
+	port(
+		a, b, cin: in std_logic;
+		s, cout: out std_logic
+	);
+end component;
+
+component deslocador
+	port(
+		entrada: in std_logic_vector (15 downto 0);
+		desloca: in std_logic_vector (1 downto 0);
+		saida: out std_logic_vector (15 downto 0);
+	);
+end component;
+
+signal x, y, c, F: std_logic_vector (15 downto 0);
+signal des: std_logic_vector (1 downto 0);
+
+begin
+
+Cin <= (not M) and (not S1) and S0;
+
+l0: ComponenteLogico port map (A(0), B(0), M, S1, S0, x(0), y(0));
+o0: FA port map (x(0), y(0), Cin, F(0), c(0));
+
+l1: ComponenteLogico port map (A(1), B(1), M, S1, S0, x(1), y(1));
+o1: FA port map (x(1), y(1), c(0), F(1), c(1));
+
+l2: ComponenteLogico port map (A(2), B(2), M, S1, S0, x(2), y(2));
+o2: FA port map (x(2), y(2), C(1), F(2), c(2));
+
+l3: ComponenteLogico port map (A(3), B(3), M, S1, S0, x(3), y(3));
+o3: FA port map (x(3), y(3), C(2), F(3), c(3));
+
+l4: ComponenteLogico port map (A(4), B(4), M, S1, S0, x(4), y(4));
+o4: FA port map (x(4), y(4), C(3), F(4), c(4));
+
+l5: ComponenteLogico port map (A(5), B(5), M, S1, S0, x(5), y(5));
+o5: FA port map (x(5), y(5), C(4), F(5), c(5));
+
+l6: ComponenteLogico port map (A(6), B(6), M, S1, S0, x(6), y(6));
+o6: FA port map (x(6), y(6), c(5), F(6), c(6));
+
+l7: ComponenteLogico port map (A(7), B(7), M, S1, S0, x(7), y(7));
+o7: FA port map (x(7), y(7), C(6), F(7), c(7));
+
+l8: ComponenteLogico port map (A(8), B(8), M, S1, S0, x(8), y(8));
+o8: FA port map (x(9), y(8), C(7), F(8), c(8));
+
+l9: ComponenteLogico port map (A(9), B(9), M, S1, S0, x(9), y(9));
+o9: FA port map (x(9), y(9), C(8), F(9), c(9));
+
+l10: ComponenteLogico port map (A(10), B(10), M, S1, S0, x(10), y(10));
+o10: FA port map (x(10), y(10), C(9), F(10), c(10));
+
+l11: ComponenteLogico port map (A(11), B(11), M, S1, S0, x(11), y(11));
+o11: FA port map (x(11), y(11), C(10), F(11), c(11));
+
+l12: ComponenteLogico port map (A(12), B(12), M, S1, S0, x(12), y(12));
+o12: FA port map (x(12), y(12), C(11), F(12), c(12));
+
+l13: ComponenteLogico port map (A(13), B(13), M, S1, S0, x(13), y(13));
+o13: FA port map (x(13), y(13), C(12), F(13), c(13));
+
+l14: ComponenteLogico port map (A(14), B(14), M, S1, S0, x(14), y(14));
+o14: FA port map (x(14), y(14), C(13), F(14), c(14));
+
+l15: ComponenteLogico port map (A(15), B(15), M, S1, S0, x(15), y(15));
+o15: FA port map (x(15), y(15), C(14), F(15), c(15));
+
+cout <= c(14) xor c(15);
+des(0) <= (not M) and S1 and (not S0);
+des(1) <= (not M) and s1 and s0;
+
+shift: deslocador port map (F, des, SAIDA);
+
+end arch;
