@@ -1,0 +1,365 @@
+Analysis & Synthesis report for ULA_Tester
+Fri Nov 15 11:41:46 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "ULA:ulaOP"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 15 11:41:46 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; ULA_Tester                                  ;
+; Top-level Entity Name              ; ULA_Tester                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 196                                         ;
+;     Total combinational functions  ; 196                                         ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 120                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; ULA_Tester         ; ULA_Tester         ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                            ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------------------------+---------+
+; ULA_Tester.vhd                   ; yes             ; User VHDL File        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ULA_Tester.vhd       ;         ;
+; hex_7seg.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/hex_7seg.vhd         ;         ;
+; ula.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ula.vhd              ;         ;
+; componentelogico.vhd             ; yes             ; Auto-Found VHDL File  ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/componentelogico.vhd ;         ;
+; fa.vhd                           ; yes             ; Auto-Found VHDL File  ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/fa.vhd               ;         ;
+; deslocador.vhd                   ; yes             ; Auto-Found VHDL File  ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/deslocador.vhd       ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 196     ;
+;                                             ;         ;
+; Total combinational functions               ; 196     ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 162     ;
+;     -- 3 input functions                    ; 32      ;
+;     -- <=2 input functions                  ; 2       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 196     ;
+;     -- arithmetic mode                      ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 120     ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; M~input ;
+; Maximum fan-out                             ; 63      ;
+; Total fan-out                               ; 953     ;
+; Average fan-out                             ; 2.19    ;
++---------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name      ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+------------------+--------------+
+; |ULA_Tester                  ; 196 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 120  ; 0            ; |ULA_Tester                                ; ULA_Tester       ; work         ;
+;    |ULA:ulaOP|               ; 112 (2)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP                      ; ULA              ; work         ;
+;       |ComponenteLogico:l10| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l10 ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l11| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l11 ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l12| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l12 ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l13| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l13 ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l14| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l14 ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l15| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l15 ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l1|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l1  ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l2|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l2  ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l3|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l3  ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l4|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l4  ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l5|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l5  ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l6|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l6  ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l7|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l7  ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l8|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l8  ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l9|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|ComponenteLogico:l9  ; ComponenteLogico ; work         ;
+;       |FA:o0|                ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o0                ; FA               ; work         ;
+;       |FA:o10|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o10               ; FA               ; work         ;
+;       |FA:o11|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o11               ; FA               ; work         ;
+;       |FA:o12|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o12               ; FA               ; work         ;
+;       |FA:o13|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o13               ; FA               ; work         ;
+;       |FA:o14|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o14               ; FA               ; work         ;
+;       |FA:o15|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o15               ; FA               ; work         ;
+;       |FA:o1|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o1                ; FA               ; work         ;
+;       |FA:o2|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o2                ; FA               ; work         ;
+;       |FA:o3|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o3                ; FA               ; work         ;
+;       |FA:o4|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o4                ; FA               ; work         ;
+;       |FA:o5|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o5                ; FA               ; work         ;
+;       |FA:o6|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o6                ; FA               ; work         ;
+;       |FA:o7|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o7                ; FA               ; work         ;
+;       |FA:o8|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o8                ; FA               ; work         ;
+;       |FA:o9|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|FA:o9                ; FA               ; work         ;
+;       |deslocador:shift|     ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|ULA:ulaOP|deslocador:shift     ; deslocador       ; work         ;
+;    |hex_7seg:dispA0|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispA0                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispA1|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispA1                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispA2|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispA2                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispA3|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispA3                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispB0|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispB0                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispB1|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispB1                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispB2|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispB2                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispB3|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispB3                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispS0|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispS0                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispS1|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispS1                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispS2|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispS2                ; hex_7seg         ; work         ;
+;    |hex_7seg:dispS3|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_Tester|hex_7seg:dispS3                ; hex_7seg         ; work         ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULA:ulaOP"                                                                         ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 120                         ;
+; cycloneiii_lcell_comb ; 215                         ;
+;     normal            ; 215                         ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 162                         ;
+;                       ;                             ;
+; Max LUT depth         ; 21.00                       ;
+; Average LUT depth     ; 11.38                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Nov 15 11:41:26 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ULA_Tester -c ULA_Tester
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file ula_tester.vhd
+    Info (12022): Found design unit 1: ULA_tester-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ULA_Tester.vhd Line: 29
+    Info (12023): Found entity 1: ULA_Tester File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ULA_Tester.vhd Line: 4
+Info (12127): Elaborating entity "ULA_Tester" for the top level hierarchy
+Warning (12125): Using design file hex_7seg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: hex_7seg-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/hex_7seg.vhd Line: 11
+    Info (12023): Found entity 1: hex_7seg File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/hex_7seg.vhd Line: 4
+Info (12128): Elaborating entity "hex_7seg" for hierarchy "hex_7seg:dispA0" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ULA_Tester.vhd Line: 53
+Warning (12125): Using design file ula.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ULA-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ula.vhd Line: 14
+    Info (12023): Found entity 1: ULA File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ula.vhd Line: 4
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ulaOP" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ULA_Tester.vhd Line: 63
+Warning (12125): Using design file componentelogico.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ComponenteLogico-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/componentelogico.vhd Line: 12
+    Info (12023): Found entity 1: ComponenteLogico File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/componentelogico.vhd Line: 4
+Info (12128): Elaborating entity "ComponenteLogico" for hierarchy "ULA:ulaOP|ComponenteLogico:l0" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ula.vhd Line: 46
+Warning (12125): Using design file fa.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: FA-arc File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/fa.vhd Line: 11
+    Info (12023): Found entity 1: FA File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/fa.vhd Line: 4
+Info (12128): Elaborating entity "FA" for hierarchy "ULA:ulaOP|FA:o0" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ula.vhd Line: 47
+Warning (12125): Using design file deslocador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: deslocador-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/deslocador.vhd Line: 12
+    Info (12023): Found entity 1: deslocador File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/deslocador.vhd Line: 4
+Info (12128): Elaborating entity "deslocador" for hierarchy "ULA:ulaOP|deslocador:shift" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ULA_teste1/ula.vhd Line: 98
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 316 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 35 input pins
+    Info (21059): Implemented 85 output pins
+    Info (21061): Implemented 196 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 652 megabytes
+    Info: Processing ended: Fri Nov 15 11:41:46 2019
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:42
+
+
