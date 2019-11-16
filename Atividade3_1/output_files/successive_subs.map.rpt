@@ -1,0 +1,401 @@
+Analysis & Synthesis report for successive_subs
+Sat Nov 16 19:17:09 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Nov 16 19:17:09 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; successive_subs                             ;
+; Top-level Entity Name              ; successive_subs                             ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 133                                         ;
+;     Total combinational functions  ; 133                                         ;
+;     Dedicated logic registers      ; 51                                          ;
+; Total registers                    ; 51                                          ;
+; Total pins                         ; 59                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; successive_subs    ; successive_subs    ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                             ; Library ;
++----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------------------------------------+---------+
+; successive_subs.vhd              ; yes             ; User VHDL File        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/successive_subs.vhd ;         ;
+; po.vhd                           ; yes             ; Auto-Found VHDL File  ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/po.vhd              ;         ;
+; pc.vhd                           ; yes             ; Auto-Found VHDL File  ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd              ;         ;
++----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 133       ;
+;                                             ;           ;
+; Total combinational functions               ; 133       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 58        ;
+;     -- 3 input functions                    ; 64        ;
+;     -- <=2 input functions                  ; 11        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 102       ;
+;     -- arithmetic mode                      ; 31        ;
+;                                             ;           ;
+; Total registers                             ; 51        ;
+;     -- Dedicated logic registers            ; 51        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 59        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; pc:i2|clr ;
+; Maximum fan-out                             ; 52        ;
+; Total fan-out                               ; 712       ;
+; Average fan-out                             ; 2.36      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-----------------+--------------+
+; |successive_subs           ; 133 (0)             ; 51 (0)                    ; 0           ; 0            ; 0       ; 0         ; 59   ; 0            ; |successive_subs       ; successive_subs ; work         ;
+;    |pc:i2|                 ; 23 (23)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |successive_subs|pc:i2 ; pc              ; work         ;
+;    |po:i1|                 ; 110 (110)           ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |successive_subs|po:i1 ; po              ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; po:i1|a_e_z                                        ; GND                 ; yes                    ;
+; po:i1|a_lt_z                                       ; po:i1|comb          ; yes                    ;
+; pc:i2|ld_a                                         ; GND                 ; yes                    ;
+; pc:i2|ld_b                                         ; GND                 ; yes                    ;
+; pc:i2|slt_a                                        ; pc:i2|slt_a         ; yes                    ;
+; pc:i2|clr                                          ; GND                 ; yes                    ;
+; pc:i2|cnt                                          ; GND                 ; yes                    ;
+; pc:i2|ud                                           ; pc:i2|slt_a         ; yes                    ;
+; pc:i2|sub_add                                      ; pc:i2|slt_a         ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------+
+; Registers Removed During Synthesis                                   ;
++----------------------------------------+-----------------------------+
+; Register name                          ; Reason for Removal          ;
++----------------------------------------+-----------------------------+
+; po:i1|quotient[0]                      ; Merged with po:i1|count[0]  ;
+; po:i1|quotient[1]                      ; Merged with po:i1|count[1]  ;
+; po:i1|quotient[2]                      ; Merged with po:i1|count[2]  ;
+; po:i1|quotient[3]                      ; Merged with po:i1|count[3]  ;
+; po:i1|quotient[4]                      ; Merged with po:i1|count[4]  ;
+; po:i1|quotient[5]                      ; Merged with po:i1|count[5]  ;
+; po:i1|quotient[6]                      ; Merged with po:i1|count[6]  ;
+; po:i1|quotient[7]                      ; Merged with po:i1|count[7]  ;
+; po:i1|quotient[8]                      ; Merged with po:i1|count[8]  ;
+; po:i1|quotient[9]                      ; Merged with po:i1|count[9]  ;
+; po:i1|quotient[10]                     ; Merged with po:i1|count[10] ;
+; po:i1|quotient[11]                     ; Merged with po:i1|count[11] ;
+; po:i1|quotient[12]                     ; Merged with po:i1|count[12] ;
+; po:i1|quotient[13]                     ; Merged with po:i1|count[13] ;
+; po:i1|quotient[14]                     ; Merged with po:i1|count[14] ;
+; po:i1|quotient[15]                     ; Merged with po:i1|count[15] ;
+; po:i1|rest[0]                          ; Merged with po:i1|reg_a[0]  ;
+; po:i1|rest[1]                          ; Merged with po:i1|reg_a[1]  ;
+; po:i1|rest[2]                          ; Merged with po:i1|reg_a[2]  ;
+; po:i1|rest[3]                          ; Merged with po:i1|reg_a[3]  ;
+; po:i1|rest[4]                          ; Merged with po:i1|reg_a[4]  ;
+; po:i1|rest[5]                          ; Merged with po:i1|reg_a[5]  ;
+; po:i1|rest[6]                          ; Merged with po:i1|reg_a[6]  ;
+; po:i1|rest[7]                          ; Merged with po:i1|reg_a[7]  ;
+; po:i1|rest[8]                          ; Merged with po:i1|reg_a[8]  ;
+; po:i1|rest[9]                          ; Merged with po:i1|reg_a[9]  ;
+; po:i1|rest[10]                         ; Merged with po:i1|reg_a[10] ;
+; po:i1|rest[11]                         ; Merged with po:i1|reg_a[11] ;
+; po:i1|rest[12]                         ; Merged with po:i1|reg_a[12] ;
+; po:i1|rest[13]                         ; Merged with po:i1|reg_a[13] ;
+; po:i1|rest[14]                         ; Merged with po:i1|reg_a[14] ;
+; po:i1|rest[15]                         ; Merged with po:i1|reg_a[15] ;
+; Total Number of Removed Registers = 32 ;                             ;
++----------------------------------------+-----------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 51    ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |successive_subs|po:i1|count[0] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |successive_subs|po:i1|reg_a[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 59                          ;
+; cycloneiii_ff         ; 51                          ;
+;     ENA SCLR          ; 32                          ;
+;     plain             ; 19                          ;
+; cycloneiii_lcell_comb ; 133                         ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 30                          ;
+;     normal            ; 102                         ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 34                          ;
+;         4 data inputs ; 58                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.50                        ;
+; Average LUT depth     ; 3.58                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat Nov 16 19:15:33 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off successive_subs -c successive_subs
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file successive_subs.vhd
+    Info (12022): Found design unit 1: successive_subs-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/successive_subs.vhd Line: 15
+    Info (12023): Found entity 1: successive_subs File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/successive_subs.vhd Line: 6
+Info (12127): Elaborating entity "successive_subs" for the top level hierarchy
+Warning (12125): Using design file po.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: po-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/po.vhd Line: 16
+    Info (12023): Found entity 1: po File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/po.vhd Line: 6
+Info (12128): Elaborating entity "po" for hierarchy "po:i1" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/successive_subs.vhd Line: 39
+Warning (10631): VHDL Process Statement warning at po.vhd(19): inferring latch(es) for signal or variable "a_e_z", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/po.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at po.vhd(19): inferring latch(es) for signal or variable "a_lt_z", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/po.vhd Line: 19
+Info (10041): Inferred latch for "a_lt_z" at po.vhd(19) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/po.vhd Line: 19
+Info (10041): Inferred latch for "a_e_z" at po.vhd(19) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/po.vhd Line: 19
+Warning (12125): Using design file pc.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: pc-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 15
+    Info (12023): Found entity 1: pc File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 6
+Info (12128): Elaborating entity "pc" for hierarchy "pc:i2" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/successive_subs.vhd Line: 42
+Warning (10631): VHDL Process Statement warning at pc.vhd(28): inferring latch(es) for signal or variable "ld_a", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at pc.vhd(28): inferring latch(es) for signal or variable "ld_b", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at pc.vhd(28): inferring latch(es) for signal or variable "slt_a", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at pc.vhd(28): inferring latch(es) for signal or variable "clr", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at pc.vhd(28): inferring latch(es) for signal or variable "cnt", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at pc.vhd(28): inferring latch(es) for signal or variable "sub_add", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at pc.vhd(28): inferring latch(es) for signal or variable "ud", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Info (10041): Inferred latch for "ud" at pc.vhd(28) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Info (10041): Inferred latch for "sub_add" at pc.vhd(28) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Info (10041): Inferred latch for "cnt" at pc.vhd(28) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Info (10041): Inferred latch for "clr" at pc.vhd(28) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Info (10041): Inferred latch for "slt_a" at pc.vhd(28) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Info (10041): Inferred latch for "ld_b" at pc.vhd(28) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Info (10041): Inferred latch for "ld_a" at pc.vhd(28) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 28
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "pc:i2|sub_add" merged with LATCH primitive "pc:i2|ud" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 11
+Warning (13012): Latch po:i1|a_lt_z has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/po.vhd Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal po:i1|reg_a[15] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/po.vhd Line: 25
+Warning (13012): Latch pc:i2|slt_a has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 9
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pc:i2|state[1] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 30
+Warning (13012): Latch pc:i2|ud has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pc:i2|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/pc.vhd Line: 30
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 192 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 41 output pins
+    Info (21061): Implemented 133 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 666 megabytes
+    Info: Processing ended: Sat Nov 16 19:17:10 2019
+    Info: Elapsed time: 00:01:37
+    Info: Total CPU time (on all processors): 00:02:43
+
+

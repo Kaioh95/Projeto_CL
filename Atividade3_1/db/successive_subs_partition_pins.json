@@ -1,0 +1,245 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "quotient[0]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[1]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[2]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[3]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[4]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[5]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[6]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[7]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[8]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[9]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[10]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[11]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[12]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[13]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[14]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[15]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[8]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[9]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[10]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[11]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[12]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[13]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[14]",
+					"strict" : false
+				},
+				{
+					"name" : "rest[15]",
+					"strict" : false
+				},
+				{
+					"name" : "sa_e_z",
+					"strict" : false
+				},
+				{
+					"name" : "sa_lt_z",
+					"strict" : false
+				},
+				{
+					"name" : "sld_a",
+					"strict" : false
+				},
+				{
+					"name" : "slb_b",
+					"strict" : false
+				},
+				{
+					"name" : "sslt_a",
+					"strict" : false
+				},
+				{
+					"name" : "sclr",
+					"strict" : false
+				},
+				{
+					"name" : "scnt",
+					"strict" : false
+				},
+				{
+					"name" : "sud",
+					"strict" : false
+				},
+				{
+					"name" : "ssub_add",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input[4]",
+					"strict" : false
+				},
+				{
+					"name" : "input[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input[8]",
+					"strict" : false
+				},
+				{
+					"name" : "input[9]",
+					"strict" : false
+				},
+				{
+					"name" : "input[10]",
+					"strict" : false
+				},
+				{
+					"name" : "input[11]",
+					"strict" : false
+				},
+				{
+					"name" : "input[12]",
+					"strict" : false
+				},
+				{
+					"name" : "input[13]",
+					"strict" : false
+				},
+				{
+					"name" : "input[14]",
+					"strict" : false
+				},
+				{
+					"name" : "input[15]",
+					"strict" : false
+				},
+				{
+					"name" : "bt",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

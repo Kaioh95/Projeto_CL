@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ld_a",
+					"strict" : false
+				},
+				{
+					"name" : "ld_b",
+					"strict" : false
+				},
+				{
+					"name" : "slt_a",
+					"strict" : false
+				},
+				{
+					"name" : "clr",
+					"strict" : false
+				},
+				{
+					"name" : "cnt",
+					"strict" : false
+				},
+				{
+					"name" : "ud",
+					"strict" : false
+				},
+				{
+					"name" : "sub_add",
+					"strict" : false
+				},
+				{
+					"name" : "a_e_z",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "a_lt_z",
+					"strict" : false
+				},
+				{
+					"name" : "bt",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

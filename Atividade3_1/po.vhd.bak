@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity po is
+	port(
+		clk, clr, ld_a, ld_b, slt_a, cnt, ud: in std_logic;
+		input: in std_logic_vector(15 downto 0);
+		a_gt_b, a_lt_b, a_e_b: out std_logic;
+		quotient: out std_logic_vector(15 downto 0);
+		rest: out std_logic_vector(15 downto 0)
+	);
+end po;
+
+architecture arch of po is
+signal reg_a: std_logic_vector(15 downto 0);
+signal reg_b: std_logic_vector(15 downto 0);
+
+begin
+	process(clk, clr, ld_a, ld_b, slt_a, cnt, ud, reg_a, reg_b)
+	variable reg_a_sub_b: std_logic_vector(15 downto 0);
+	
