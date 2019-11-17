@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/simulation/qsim
 Ehard_block
-Z1 w1573998679
+Z1 w1574013050
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -25,9 +25,9 @@ VOgIg9T_BR7joedFDVM>H13
 !s100 A`ID_i56<Ua56=ZD=[EG=2
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1573998683
+Z11 !s110 1574013054
 !i10b 1
-Z12 !s108 1573998683.000000
+Z12 !s108 1574013054.000000
 Z13 !s90 -work|work|successive_subs.vho|
 Z14 !s107 successive_subs.vho|
 !i113 1
@@ -70,8 +70,8 @@ R8
 R9
 l0
 L79
-VIF;Q=H?gXCzOz7:`WX9ch1
-!s100 ^h@2<X4KD5c7mPCQYTL9k0
+V033L?7WQ6CNVJdjIFNSAm1
+!s100 JUoPh;K7APVVHB_=I:j7k0
 R10
 32
 R11
@@ -91,14 +91,14 @@ R4
 R5
 R6
 R18
-DEx4 work 15 successive_subs 0 22 IF;Q=H?gXCzOz7:`WX9ch1
-l406
-L142
-VSd4k5RD^Il=R>RDn=7iid1
-!s100 lELFJbl:P6Id=J=G=f;6l1
+DEx4 work 15 successive_subs 0 22 033L?7WQ6CNVJdjIFNSAm1
+l693
+L238
+V5HCF`M2SAkik5cF_KbHb42
+!s100 8=H:c<znVcNeO@>1UgX5L3
 R10
 32
-R11
+Z19 !s110 1574013055
 !i10b 1
 R12
 R13
@@ -107,23 +107,23 @@ R14
 R15
 R16
 Esuccessive_subs_vhd_vec_tst
-Z19 w1573998673
+Z20 w1574013043
 R5
 R6
 R0
-Z20 8Waveform.vwf.vht
-Z21 FWaveform.vwf.vht
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
 l0
 L31
 VR3:`IB4?n7miKP>ZLoV^:1
 !s100 :7Uf_c`2JbmoZTomKJzYz3
 R10
 32
-Z22 !s110 1573998684
+R19
 !i10b 1
-Z23 !s108 1573998684.000000
-Z24 !s90 -work|work|Waveform.vwf.vht|
-Z25 !s107 Waveform.vwf.vht|
+Z23 !s108 1574013055.000000
+Z24 !s90 -work|work|Waveform1.vwf.vht|
+Z25 !s107 Waveform1.vwf.vht|
 !i113 1
 R15
 R16
@@ -131,13 +131,13 @@ Asuccessive_subs_arch
 R5
 R6
 Z26 DEx4 work 27 successive_subs_vhd_vec_tst 0 22 R3:`IB4?n7miKP>ZLoV^:1
-l50
+l74
 L33
-VCi96]6bSlSDXQ4zz5LZ7Z0
-!s100 0nenRgmjEH8Bzm03VmgAj1
+Vi457h?XbeF;ZaLN_I7Pli1
+!s100 G1T7C1gNEJ1ACA98zcEWf2
 R10
 32
-R22
+R19
 !i10b 1
 R23
 R24

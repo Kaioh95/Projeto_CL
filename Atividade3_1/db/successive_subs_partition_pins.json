@@ -4,6 +4,342 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "Di0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Di0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Di0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Di0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Di0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Di0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Di0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Di1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Di1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Di1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Di1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Di1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Di1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Di1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Di2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Di2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Di2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Di2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Di2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Di2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Di2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Di3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Di3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Di3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Di3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Di3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Di3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Di3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dq3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dr3[6]",
+					"strict" : false
+				},
+				{
 					"name" : "quotient[0]",
 					"strict" : false
 				},
@@ -132,10 +468,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
 					"name" : "input[0]",
 					"strict" : false
 				},
@@ -197,6 +529,10 @@
 				},
 				{
 					"name" : "input[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				},
 				{

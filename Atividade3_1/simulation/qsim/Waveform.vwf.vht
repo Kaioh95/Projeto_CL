@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/17/2019 10:51:13"
+-- Generated on "11/17/2019 14:46:10"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          successive_subs
 -- 
@@ -35,6 +35,18 @@ ARCHITECTURE successive_subs_arch OF successive_subs_vhd_vec_tst IS
 -- signals                                                   
 SIGNAL bt : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
+SIGNAL Di0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Di1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Di2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Di3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Dq0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Dq1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Dq2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Dq3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Dr0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Dr1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Dr2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL Dr3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL input : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL quotient : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL rest : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -42,6 +54,18 @@ COMPONENT successive_subs
 	PORT (
 	bt : IN STD_LOGIC;
 	clk : IN STD_LOGIC;
+	Di0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Di1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Di2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Di3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Dq0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Dq1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Dq2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Dq3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Dr0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Dr1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Dr2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	Dr3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	input : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 	quotient : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	rest : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
@@ -53,6 +77,18 @@ BEGIN
 -- list connections between master ports and signals
 	bt => bt,
 	clk => clk,
+	Di0 => Di0,
+	Di1 => Di1,
+	Di2 => Di2,
+	Di3 => Di3,
+	Dq0 => Dq0,
+	Dq1 => Dq1,
+	Dq2 => Dq2,
+	Dq3 => Dq3,
+	Dr0 => Dr0,
+	Dr1 => Dr1,
+	Dr2 => Dr2,
+	Dr3 => Dr3,
 	input => input,
 	quotient => quotient,
 	rest => rest
@@ -129,10 +165,6 @@ BEGIN
 	input(4) <= '1';
 	WAIT FOR 150000 ps;
 	input(4) <= '0';
-	WAIT FOR 160000 ps;
-	input(4) <= '1';
-	WAIT FOR 150000 ps;
-	input(4) <= '0';
 WAIT;
 END PROCESS t_prcs_input_4;
 -- input[3]
@@ -158,10 +190,6 @@ BEGIN
 	WAIT FOR 150000 ps;
 	input(1) <= '1';
 	WAIT FOR 160000 ps;
-	input(1) <= '0';
-	WAIT FOR 150000 ps;
-	input(1) <= '1';
-	WAIT FOR 150000 ps;
 	input(1) <= '0';
 WAIT;
 END PROCESS t_prcs_input_1;
@@ -190,25 +218,13 @@ BEGIN
 	bt <= '1';
 	WAIT FOR 20000 ps;
 	bt <= '0';
-	WAIT FOR 130000 ps;
-	bt <= '1';
-	WAIT FOR 20000 ps;
-	bt <= '0';
-	WAIT FOR 70000 ps;
+	WAIT FOR 220000 ps;
 	bt <= '1';
 	WAIT FOR 30000 ps;
 	bt <= '0';
-	WAIT FOR 90000 ps;
-	bt <= '1';
-	WAIT FOR 30000 ps;
-	bt <= '0';
-	WAIT FOR 160000 ps;
+	WAIT FOR 370000 ps;
 	bt <= '1';
 	WAIT FOR 40000 ps;
-	bt <= '0';
-	WAIT FOR 330000 ps;
-	bt <= '1';
-	WAIT FOR 20000 ps;
 	bt <= '0';
 WAIT;
 END PROCESS t_prcs_bt;
