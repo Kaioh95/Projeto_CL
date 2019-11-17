@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/16/2019 23:35:20"
+-- Generated on "11/17/2019 10:51:13"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          successive_subs
 -- 
@@ -38,31 +38,13 @@ SIGNAL clk : STD_LOGIC;
 SIGNAL input : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL quotient : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL rest : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL sa_e_z : STD_LOGIC;
-SIGNAL sa_lt_z : STD_LOGIC;
-SIGNAL sclr : STD_LOGIC;
-SIGNAL scnt : STD_LOGIC;
-SIGNAL slb_b : STD_LOGIC;
-SIGNAL sld_a : STD_LOGIC;
-SIGNAL sslt_a : STD_LOGIC;
-SIGNAL ssub_add : STD_LOGIC;
-SIGNAL sud : STD_LOGIC;
 COMPONENT successive_subs
 	PORT (
 	bt : IN STD_LOGIC;
 	clk : IN STD_LOGIC;
 	input : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-	quotient : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
-	rest : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
-	sa_e_z : BUFFER STD_LOGIC;
-	sa_lt_z : BUFFER STD_LOGIC;
-	sclr : BUFFER STD_LOGIC;
-	scnt : BUFFER STD_LOGIC;
-	slb_b : BUFFER STD_LOGIC;
-	sld_a : BUFFER STD_LOGIC;
-	sslt_a : BUFFER STD_LOGIC;
-	ssub_add : BUFFER STD_LOGIC;
-	sud : BUFFER STD_LOGIC
+	quotient : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	rest : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -73,16 +55,7 @@ BEGIN
 	clk => clk,
 	input => input,
 	quotient => quotient,
-	rest => rest,
-	sa_e_z => sa_e_z,
-	sa_lt_z => sa_lt_z,
-	sclr => sclr,
-	scnt => scnt,
-	slb_b => slb_b,
-	sld_a => sld_a,
-	sslt_a => sslt_a,
-	ssub_add => ssub_add,
-	sud => sud
+	rest => rest
 	);
 -- input[15]
 t_prcs_input_15: PROCESS
@@ -154,7 +127,11 @@ END PROCESS t_prcs_input_5;
 t_prcs_input_4: PROCESS
 BEGIN
 	input(4) <= '1';
-	WAIT FOR 120000 ps;
+	WAIT FOR 150000 ps;
+	input(4) <= '0';
+	WAIT FOR 160000 ps;
+	input(4) <= '1';
+	WAIT FOR 150000 ps;
 	input(4) <= '0';
 WAIT;
 END PROCESS t_prcs_input_4;
@@ -162,8 +139,10 @@ END PROCESS t_prcs_input_4;
 t_prcs_input_3: PROCESS
 BEGIN
 	input(3) <= '0';
-	WAIT FOR 120000 ps;
+	WAIT FOR 150000 ps;
 	input(3) <= '1';
+	WAIT FOR 160000 ps;
+	input(3) <= '0';
 WAIT;
 END PROCESS t_prcs_input_3;
 -- input[2]
@@ -176,8 +155,14 @@ END PROCESS t_prcs_input_2;
 t_prcs_input_1: PROCESS
 BEGIN
 	input(1) <= '0';
-	WAIT FOR 120000 ps;
+	WAIT FOR 150000 ps;
 	input(1) <= '1';
+	WAIT FOR 160000 ps;
+	input(1) <= '0';
+	WAIT FOR 150000 ps;
+	input(1) <= '1';
+	WAIT FOR 150000 ps;
+	input(1) <= '0';
 WAIT;
 END PROCESS t_prcs_input_1;
 -- input[0]
@@ -192,9 +177,9 @@ t_prcs_clk: PROCESS
 BEGIN
 LOOP
 	clk <= '0';
-	WAIT FOR 20000 ps;
+	WAIT FOR 5000 ps;
 	clk <= '1';
-	WAIT FOR 20000 ps;
+	WAIT FOR 5000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
@@ -202,16 +187,26 @@ END PROCESS t_prcs_clk;
 -- bt
 t_prcs_bt: PROCESS
 BEGIN
-	bt <= '0';
-	WAIT FOR 10000 ps;
 	bt <= '1';
 	WAIT FOR 20000 ps;
 	bt <= '0';
-	WAIT FOR 100000 ps;
+	WAIT FOR 130000 ps;
 	bt <= '1';
 	WAIT FOR 20000 ps;
 	bt <= '0';
-	WAIT FOR 660000 ps;
+	WAIT FOR 70000 ps;
+	bt <= '1';
+	WAIT FOR 30000 ps;
+	bt <= '0';
+	WAIT FOR 90000 ps;
+	bt <= '1';
+	WAIT FOR 30000 ps;
+	bt <= '0';
+	WAIT FOR 160000 ps;
+	bt <= '1';
+	WAIT FOR 40000 ps;
+	bt <= '0';
+	WAIT FOR 330000 ps;
 	bt <= '1';
 	WAIT FOR 20000 ps;
 	bt <= '0';

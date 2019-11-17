@@ -20,7 +20,7 @@ constant NextOp: std_logic_vector(2 downto 0) := "011";
 constant AsubB: std_logic_vector(2 downto 0) := "100";
 constant Re: std_logic_vector(2 downto 0) := "101";
 constant Re_Rest: std_logic_vector(2 downto 0) := "110";
-constant ShowRe: std_logic_vector(2 downto 0) := "111";
+constant blockBT2: std_logic_vector(2 downto 0) := "111";
 
 signal state: std_logic_vector(2 downto 0) := initA;
 begin
@@ -88,16 +88,20 @@ begin
 			state <= NextOp;
 		
 		when Re =>
-			state <= ShowRe;
+			if(bt = '1') then
+				state <= blockBT2;
+			else
+				state <= Re;
+			end if;
 			
 		when Re_Rest =>
-			state <= ShowRe;
+			state <= Re;
 			
 		when others =>
 			if(bt = '1') then
-				state <= initA;
+				state <= blockBT2;
 			else
-				state <= ShowRe;
+				state <= InitA;
 			end if;
 		end case;
 	end if;
@@ -119,7 +123,12 @@ begin
 		ld_b <= '1';
 		clr <= '0';
 		cnt <= '0';
-	elsif(state = ShowRe) then
+	elsif(state = Re) then
+		ld_a <= '0';
+		ld_b <= '0';
+		clr <= '0';
+		cnt <= '0';
+	elsif(state = blockBT2) then
 		ld_a <= '0';
 		ld_b <= '0';
 		clr <= '0';

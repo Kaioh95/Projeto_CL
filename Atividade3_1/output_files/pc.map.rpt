@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pc
-Sat Nov 16 23:21:34 2019
+Sun Nov 17 10:33:27 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 16 23:21:34 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 17 10:33:27 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; pc                                          ;
 ; Top-level Entity Name              ; pc                                          ;
@@ -182,9 +182,9 @@ refer to the applicable agreement for further details.
 ;                                             ;          ;
 ; Total combinational functions               ; 32       ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 12       ;
-;     -- 3 input functions                    ; 13       ;
-;     -- <=2 input functions                  ; 7        ;
+;     -- 4 input functions                    ; 14       ;
+;     -- 3 input functions                    ; 10       ;
+;     -- <=2 input functions                  ; 8        ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
 ;     -- normal mode                          ; 32       ;
@@ -199,9 +199,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; state[1] ;
-; Maximum fan-out                             ; 18       ;
-; Total fan-out                               ; 146      ;
-; Average fan-out                             ; 2.32     ;
+; Maximum fan-out                             ; 14       ;
+; Total fan-out                               ; 147      ;
+; Average fan-out                             ; 2.33     ;
 +---------------------------------------------+----------+
 
 
@@ -261,12 +261,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     plain             ; 4                           ;
 ; cycloneiii_lcell_comb ; 32                          ;
 ;     normal            ; 32                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 12                          ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.94                        ;
+; Average LUT depth     ; 2.17                        ;
 +-----------------------+-----------------------------+
 
 
@@ -275,7 +275,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -285,7 +285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 16 23:20:23 2019
+    Info: Processing started: Sun Nov 17 10:32:28 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pc -c pc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -305,9 +305,9 @@ Info (21057): Implemented 45 device resources after synthesis - the final resour
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 34 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 665 megabytes
-    Info: Processing ended: Sat Nov 16 23:21:34 2019
-    Info: Elapsed time: 00:01:11
-    Info: Total CPU time (on all processors): 00:02:31
+    Info: Peak virtual memory: 667 megabytes
+    Info: Processing ended: Sun Nov 17 10:33:27 2019
+    Info: Elapsed time: 00:00:59
+    Info: Total CPU time (on all processors): 00:02:14
 
 

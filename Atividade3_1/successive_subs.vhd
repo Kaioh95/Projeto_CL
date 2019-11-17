@@ -7,8 +7,7 @@ entity successive_subs is
 port(
 	clk, bt:in std_logic;
 	input:in std_logic_vector(15 downto 0);
-	quotient, rest:out std_logic_vector(15 downto 0);
-	sa_e_z, sa_lt_z, sld_a, slb_b, sslt_a, sclr, scnt, sud, ssub_add: out std_logic
+	quotient, rest:out std_logic_vector(15 downto 0)
 );
 end successive_subs;
 
@@ -42,14 +41,5 @@ begin
 	i2: pc port map(clk, bt, a_e_z, a_lt_z,
 						ld_a, ld_b, slt_a,
 						clr, cnt, ud, sub_add);
-	sa_e_z <= a_e_z;
-	sa_lt_z <= a_lt_z;
-	sld_a <= ld_a;
-	slb_b <= ld_b;
-	sslt_a <= slt_a;
-	sclr <= clr;
-	scnt <= cnt;
-	sud <= ud;
-	ssub_add <= sub_add;
 	
 end arch;

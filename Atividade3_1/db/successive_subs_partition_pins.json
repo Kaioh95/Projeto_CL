@@ -132,42 +132,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "sa_e_z",
-					"strict" : false
-				},
-				{
-					"name" : "sa_lt_z",
-					"strict" : false
-				},
-				{
-					"name" : "sld_a",
-					"strict" : false
-				},
-				{
-					"name" : "slb_b",
-					"strict" : false
-				},
-				{
-					"name" : "sslt_a",
-					"strict" : false
-				},
-				{
-					"name" : "sclr",
-					"strict" : false
-				},
-				{
-					"name" : "scnt",
-					"strict" : false
-				},
-				{
-					"name" : "sud",
-					"strict" : false
-				},
-				{
-					"name" : "ssub_add",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},

@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat Nov 16 23:25:32 2019
+Analysis & Synthesis Status : Successful - Sun Nov 17 10:37:53 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : successive_subs
 Top-level Entity Name : successive_subs
 Family : Cyclone IV E
-Total logic elements : 144
-    Total combinational functions : 144
+Total logic elements : 143
+    Total combinational functions : 143
     Dedicated logic registers : 57
 Total registers : 57
-Total pins : 59
+Total pins : 50
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
