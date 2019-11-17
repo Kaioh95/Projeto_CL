@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade3_1/simulation/qsim
 Ehard_block
-Z1 w1573943056
+Z1 w1573958131
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -25,9 +25,9 @@ VOgIg9T_BR7joedFDVM>H13
 !s100 A`ID_i56<Ua56=ZD=[EG=2
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1573943060
+Z11 !s110 1573958139
 !i10b 1
-Z12 !s108 1573943059.000000
+Z12 !s108 1573958138.000000
 Z13 !s90 -work|work|successive_subs.vho|
 Z14 !s107 successive_subs.vho|
 !i113 1
@@ -56,7 +56,7 @@ R14
 R15
 R16
 Epc
-Z17 w1573932355
+Z17 w1573954649
 R3
 R7
 R2
@@ -74,9 +74,9 @@ Vc58NYCGOTEhF?KLIRmF=E3
 !s100 e;[:f@@9alaD?5W4:WB;h2
 R10
 32
-Z22 !s110 1573932359
+Z22 !s110 1573954660
 !i10b 1
-Z23 !s108 1573932359.000000
+Z23 !s108 1573954659.000000
 Z24 !s90 -work|work|pc.vho|
 Z25 !s107 pc.vho|
 !i113 1
@@ -92,10 +92,10 @@ R5
 R6
 R19
 DEx4 work 2 pc 0 22 c58NYCGOTEhF?KLIRmF=E3
-l193
+l195
 L109
-Vonee`[iA4BzdOYXo8EKP[2
-!s100 Ff9Vl]i_HK77K?f]YHPTR2
+V[RKo][_R2WkYARNiLCiAW0
+!s100 f3zajWX4g4BN^^T43MGI21
 R10
 32
 R22
@@ -107,7 +107,7 @@ R25
 R15
 R16
 Epc_vhd_vec_tst
-Z26 w1573932350
+Z26 w1573954639
 R5
 R6
 R0
@@ -119,11 +119,11 @@ Vjm82CJQ8OcVa;MhFTPa973
 !s100 `ZbUn16;X]f@3@jW05gFN3
 R10
 32
-Z29 !s110 1573932360
+Z29 !s110 1573954661
 !i10b 1
-R23
-Z30 !s90 -work|work|Waveform1.vwf.vht|
-Z31 !s107 Waveform1.vwf.vht|
+Z30 !s108 1573954660.000000
+Z31 !s90 -work|work|Waveform1.vwf.vht|
+Z32 !s107 Waveform1.vwf.vht|
 !i113 1
 R15
 R16
@@ -139,14 +139,14 @@ R10
 32
 R29
 !i10b 1
-R23
 R30
 R31
+R32
 !i113 1
 R15
 R16
 Epo
-Z32 w1573936964
+Z33 w1573953799
 R3
 R7
 R2
@@ -156,19 +156,19 @@ R5
 R6
 R19
 R0
-Z33 8po.vho
-Z34 Fpo.vho
+Z34 8po.vho
+Z35 Fpo.vho
 l0
 L79
 VaRQ[U>BWDPHmKfAD:9R@B2
 !s100 S13H`AVAA?KPo2`CT;UzT1
 R10
 32
-Z35 !s110 1573936968
+Z36 !s110 1573953803
 !i10b 1
-Z36 !s108 1573936968.000000
-Z37 !s90 -work|work|po.vho|
-Z38 !s107 po.vho|
+Z37 !s108 1573953803.000000
+Z38 !s90 -work|work|po.vho|
+Z39 !s107 po.vho|
 !i113 1
 R15
 R16
@@ -182,38 +182,38 @@ R5
 R6
 R19
 DEx4 work 2 po 0 22 aRQ[U>BWDPHmKfAD:9R@B2
-l423
+l393
 L158
-VJIzeTG5QL3BmB7J`NOfY:2
-!s100 T83hfG:GVRd=6]I;Ze=@C3
+VM>gT]c?GYk=U<TKDY]1f@1
+!s100 _d_;NBg0@JlF40aczB?Fn3
 R10
 32
-R35
-!i10b 1
 R36
+!i10b 1
 R37
 R38
+R39
 !i113 1
 R15
 R16
 Epo_vhd_vec_tst
-Z39 w1573936958
+Z40 w1573953794
 R5
 R6
 R0
-Z40 8Waveform2.vwf.vht
-Z41 FWaveform2.vwf.vht
+Z41 8Waveform2.vwf.vht
+Z42 FWaveform2.vwf.vht
 l0
 L31
 Vaf<3]bD7NMJm2nbY9A_DJ3
 !s100 9[fQnM;:=e`jkg=MTnKW;1
 R10
 32
-Z42 !s110 1573936969
+Z43 !s110 1573953804
 !i10b 1
-Z43 !s108 1573936969.000000
-Z44 !s90 -work|work|Waveform2.vwf.vht|
-Z45 !s107 Waveform2.vwf.vht|
+Z44 !s108 1573953804.000000
+Z45 !s90 -work|work|Waveform2.vwf.vht|
+Z46 !s107 Waveform2.vwf.vht|
 !i113 1
 R15
 R16
@@ -223,15 +223,15 @@ R6
 DEx4 work 14 po_vhd_vec_tst 0 22 af<3]bD7NMJm2nbY9A_DJ3
 l66
 L33
-VPf9Yz6ciHebhAi];93QSf2
-!s100 ec@fHaFcj^HlCf^_ii^8n1
+VEdPkY7mVMlibg@IYkCBN01
+!s100 zmdMKcz6@TR9iCS[h7W7O3
 R10
 32
-R42
-!i10b 1
 R43
+!i10b 1
 R44
 R45
+R46
 !i113 1
 R15
 R16
@@ -272,10 +272,10 @@ R5
 R6
 R19
 DEx4 work 15 successive_subs 0 22 BY37ZZ]T<EG?LW40:CN8a2
-l420
+l442
 L160
-VI<?^lM7F9Y?=BIE<g@AGb0
-!s100 P8:EYP>2AzWCjRUmznldd2
+VP_N@GmYbWJindUGDPS@W^3
+!s100 Qh15=hj`2W8jo9[dC@=DO0
 R10
 32
 R11
@@ -287,41 +287,41 @@ R14
 R15
 R16
 Esuccessive_subs_vhd_vec_tst
-Z46 w1573943049
+Z47 w1573958120
 R5
 R6
 R0
-Z47 8Waveform.vwf.vht
-Z48 FWaveform.vwf.vht
+Z48 8Waveform.vwf.vht
+Z49 FWaveform.vwf.vht
 l0
 L31
 VR3:`IB4?n7miKP>ZLoV^:1
 !s100 :7Uf_c`2JbmoZTomKJzYz3
 R10
 32
-Z49 !s110 1573943061
+Z50 !s110 1573958140
 !i10b 1
-Z50 !s108 1573943060.000000
-Z51 !s90 -work|work|Waveform.vwf.vht|
-Z52 !s107 Waveform.vwf.vht|
+Z51 !s108 1573958139.000000
+Z52 !s90 -work|work|Waveform.vwf.vht|
+Z53 !s107 Waveform.vwf.vht|
 !i113 1
 R15
 R16
 Asuccessive_subs_arch
 R5
 R6
-Z53 DEx4 work 27 successive_subs_vhd_vec_tst 0 22 R3:`IB4?n7miKP>ZLoV^:1
+Z54 DEx4 work 27 successive_subs_vhd_vec_tst 0 22 R3:`IB4?n7miKP>ZLoV^:1
 l68
 L33
-VGeKjKCclQc1cO_6aY^mI:0
-!s100 1hAe62E^EL6DA><H_X5W;0
+V31hT4[739RL>OCfT];z2f3
+!s100 2LD>8>IdE5Gll46>HVhO<3
 R10
 32
-R49
-!i10b 1
 R50
+!i10b 1
 R51
 R52
+R53
 !i113 1
 R15
 R16

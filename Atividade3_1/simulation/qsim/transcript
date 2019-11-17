@@ -1,7 +1,7 @@
 # do successive_subs.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:24:19 on Nov 16,2019
+# Start time: 23:35:38 on Nov 16,2019
 # vcom -work work successive_subs.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -16,20 +16,20 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity successive_subs
 # -- Compiling architecture structure of successive_subs
-# End time: 19:24:20 on Nov 16,2019, Elapsed time: 0:00:01
+# End time: 23:35:39 on Nov 16,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:24:20 on Nov 16,2019
+# Start time: 23:35:39 on Nov 16,2019
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity successive_subs_vhd_vec_tst
 # -- Compiling architecture successive_subs_arch of successive_subs_vhd_vec_tst
-# End time: 19:24:21 on Nov 16,2019, Elapsed time: 0:00:01
+# End time: 23:35:40 on Nov 16,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.successive_subs_vhd_vec_tst 
-# Start time: 19:24:21 on Nov 16,2019
+# Start time: 23:35:41 on Nov 16,2019
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -49,8 +49,8 @@
 # Loading cycloneive.cycloneive_ena_reg(behave)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 27322 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 29388 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
-# End time: 19:24:23 on Nov 16,2019, Elapsed time: 0:00:02
+# End time: 23:35:44 on Nov 16,2019, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 1

@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/16/2019 17:42:38"
+-- Generated on "11/16/2019 22:23:14"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          po
 -- 
@@ -211,9 +211,17 @@ END PROCESS t_prcs_clr;
 t_prcs_cnt: PROCESS
 BEGIN
 	cnt <= '0';
-	WAIT FOR 320000 ps;
+	WAIT FOR 330000 ps;
 	cnt <= '1';
-	WAIT FOR 70000 ps;
+	WAIT FOR 20000 ps;
+	cnt <= '0';
+	WAIT FOR 60000 ps;
+	cnt <= '1';
+	WAIT FOR 20000 ps;
+	cnt <= '0';
+	WAIT FOR 220000 ps;
+	cnt <= '1';
+	WAIT FOR 20000 ps;
 	cnt <= '0';
 WAIT;
 END PROCESS t_prcs_cnt;
@@ -226,9 +234,17 @@ BEGIN
 	ld_a <= '1';
 	WAIT FOR 20000 ps;
 	ld_a <= '0';
-	WAIT FOR 250000 ps;
+	WAIT FOR 260000 ps;
 	ld_a <= '1';
-	WAIT FOR 70000 ps;
+	WAIT FOR 20000 ps;
+	ld_a <= '0';
+	WAIT FOR 60000 ps;
+	ld_a <= '1';
+	WAIT FOR 20000 ps;
+	ld_a <= '0';
+	WAIT FOR 220000 ps;
+	ld_a <= '1';
+	WAIT FOR 20000 ps;
 	ld_a <= '0';
 WAIT;
 END PROCESS t_prcs_ld_a;
@@ -257,12 +273,20 @@ END PROCESS t_prcs_slt_a;
 t_prcs_sub_add: PROCESS
 BEGIN
 	sub_add <= '0';
+	WAIT FOR 650000 ps;
+	sub_add <= '1';
+	WAIT FOR 20000 ps;
+	sub_add <= '0';
 WAIT;
 END PROCESS t_prcs_sub_add;
 
 -- ud
 t_prcs_ud: PROCESS
 BEGIN
+	ud <= '0';
+	WAIT FOR 650000 ps;
+	ud <= '1';
+	WAIT FOR 20000 ps;
 	ud <= '0';
 WAIT;
 END PROCESS t_prcs_ud;

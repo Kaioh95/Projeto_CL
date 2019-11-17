@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/16/2019 19:24:09"
+-- Generated on "11/16/2019 23:35:20"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          successive_subs
 -- 
@@ -153,15 +153,17 @@ END PROCESS t_prcs_input_5;
 -- input[4]
 t_prcs_input_4: PROCESS
 BEGIN
+	input(4) <= '1';
+	WAIT FOR 120000 ps;
 	input(4) <= '0';
 WAIT;
 END PROCESS t_prcs_input_4;
 -- input[3]
 t_prcs_input_3: PROCESS
 BEGIN
-	input(3) <= '1';
-	WAIT FOR 200000 ps;
 	input(3) <= '0';
+	WAIT FOR 120000 ps;
+	input(3) <= '1';
 WAIT;
 END PROCESS t_prcs_input_3;
 -- input[2]
@@ -174,14 +176,14 @@ END PROCESS t_prcs_input_2;
 t_prcs_input_1: PROCESS
 BEGIN
 	input(1) <= '0';
+	WAIT FOR 120000 ps;
+	input(1) <= '1';
 WAIT;
 END PROCESS t_prcs_input_1;
 -- input[0]
 t_prcs_input_0: PROCESS
 BEGIN
 	input(0) <= '0';
-	WAIT FOR 200000 ps;
-	input(0) <= '1';
 WAIT;
 END PROCESS t_prcs_input_0;
 
@@ -205,7 +207,11 @@ BEGIN
 	bt <= '1';
 	WAIT FOR 20000 ps;
 	bt <= '0';
-	WAIT FOR 220000 ps;
+	WAIT FOR 100000 ps;
+	bt <= '1';
+	WAIT FOR 20000 ps;
+	bt <= '0';
+	WAIT FOR 660000 ps;
 	bt <= '1';
 	WAIT FOR 20000 ps;
 	bt <= '0';

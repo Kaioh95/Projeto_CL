@@ -16,10 +16,11 @@ architecture arch of pc is
 constant initA: std_logic_vector(2 downto 0) := "000";
 constant blockBT: std_logic_vector(2 downto 0) := "001";
 constant initB: std_logic_vector(2 downto 0) := "010";
-constant AsubB: std_logic_vector(2 downto 0) := "011";
-constant Re: std_logic_vector(2 downto 0) := "100";
-constant Re_Rest: std_logic_vector(2 downto 0) := "101";
-constant blockBT2: std_logic_vector(2 downto 0) := "110";
+constant NextOp: std_logic_vector(2 downto 0) := "011";
+constant AsubB: std_logic_vector(2 downto 0) := "100";
+constant Re: std_logic_vector(2 downto 0) := "101";
+constant Re_Rest: std_logic_vector(2 downto 0) := "110";
+constant ShowRe: std_logic_vector(2 downto 0) := "111";
 
 signal state: std_logic_vector(2 downto 0) := initA;
 begin
@@ -45,12 +46,12 @@ begin
 		
 		when initB =>
 			if(bt = '1') then
-				state <= AsubB;
+				state <= NextOp;
 			else
 				state <= initB;
 			end if;
 		
-		when AsubB =>
+		when NextOp =>
 			if(a_e_z = '1') then
 				ld_a <= '0';
 				ld_b <= '0';
@@ -77,26 +78,26 @@ begin
 				ud <= '0';
 				state <= AsubB;
 			end if;
-			
+		
+		when AsubB =>
+			ld_a <= '0';
+			ld_b <= '0';
+			slt_a <= '0';
+			clr <= '0';
+			cnt <= '0';
+			state <= NextOp;
+		
 		when Re =>
-			if(bt = '1') then
-				state <= blockBT2;
-			else
-				state <= Re;
-			end if;
+			state <= ShowRe;
 			
 		when Re_Rest =>
-			if(bt = '1') then
-				state <= blockBT2;
-			else
-				state <= Re_Rest;
-			end if;
+			state <= ShowRe;
 			
 		when others =>
 			if(bt = '1') then
-				state <= blockBT2;
-			else
 				state <= initA;
+			else
+				state <= ShowRe;
 			end if;
 		end case;
 	end if;
@@ -118,12 +119,7 @@ begin
 		ld_b <= '1';
 		clr <= '0';
 		cnt <= '0';
-	elsif(state = Re) then
-		ld_a <= '0';
-		ld_b <= '0';
-		clr <= '0';
-		cnt <= '0';
-	elsif(state = Re_Rest) then
+	elsif(state = ShowRe) then
 		ld_a <= '0';
 		ld_b <= '0';
 		clr <= '0';

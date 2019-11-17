@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pc
-Sat Nov 16 19:27:12 2019
+Sat Nov 16 23:21:34 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,9 +15,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +44,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 16 19:27:12 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 16 23:21:34 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; pc                                          ;
 ; Top-level Entity Name              ; pc                                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 30                                          ;
-;     Total combinational functions  ; 30                                          ;
+; Total logic elements               ; 32                                          ;
+;     Total combinational functions  ; 32                                          ;
 ;     Dedicated logic registers      ; 9                                           ;
 ; Total registers                    ; 9                                           ;
 ; Total pins                         ; 11                                          ;
@@ -177,16 +178,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 30       ;
+; Estimated Total logic elements              ; 32       ;
 ;                                             ;          ;
-; Total combinational functions               ; 30       ;
+; Total combinational functions               ; 32       ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 10       ;
-;     -- 3 input functions                    ; 12       ;
-;     -- <=2 input functions                  ; 8        ;
+;     -- 4 input functions                    ; 12       ;
+;     -- 3 input functions                    ; 13       ;
+;     -- <=2 input functions                  ; 7        ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 30       ;
+;     -- normal mode                          ; 32       ;
 ;     -- arithmetic mode                      ; 0        ;
 ;                                             ;          ;
 ; Total registers                             ; 9        ;
@@ -198,9 +199,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; state[1] ;
-; Maximum fan-out                             ; 12       ;
-; Total fan-out                               ; 136      ;
-; Average fan-out                             ; 2.23     ;
+; Maximum fan-out                             ; 18       ;
+; Total fan-out                               ; 146      ;
+; Average fan-out                             ; 2.32     ;
 +---------------------------------------------+----------+
 
 
@@ -209,7 +210,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |pc                        ; 30 (30)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |pc                 ; pc          ; work         ;
+; |pc                        ; 32 (32)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |pc                 ; pc          ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -239,6 +240,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 8:1                ; 2 bits    ; 10 LEs        ; 2 LEs                ; 8 LEs                  ; Yes        ; |pc|ld_b~reg0              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -249,15 +259,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     CLR               ; 1                           ;
 ;     ENA CLR           ; 4                           ;
 ;     plain             ; 4                           ;
-; cycloneiii_lcell_comb ; 30                          ;
-;     normal            ; 30                          ;
-;         1 data inputs ; 1                           ;
+; cycloneiii_lcell_comb ; 32                          ;
+;     normal            ; 32                          ;
 ;         2 data inputs ; 7                           ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 10                          ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 12                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.33                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.94                        ;
 +-----------------------+-----------------------------+
 
 
@@ -266,7 +275,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -276,7 +285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 16 19:25:59 2019
+    Info: Processing started: Sat Nov 16 23:20:23 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pc -c pc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -291,14 +300,14 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 45 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 32 logic cells
+    Info (21061): Implemented 34 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 665 megabytes
-    Info: Processing ended: Sat Nov 16 19:27:12 2019
-    Info: Elapsed time: 00:01:13
-    Info: Total CPU time (on all processors): 00:02:35
+    Info: Processing ended: Sat Nov 16 23:21:34 2019
+    Info: Elapsed time: 00:01:11
+    Info: Total CPU time (on all processors): 00:02:31
 
 

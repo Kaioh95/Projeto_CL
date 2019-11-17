@@ -333,17 +333,27 @@ rest[15] <= rest[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |successive_subs|pc:i2
+clk => ud~reg0.CLK
+clk => sub_add~reg0.CLK
+clk => slt_a~reg0.CLK
+clk => cnt~reg0.CLK
+clk => clr~reg0.CLK
+clk => ld_b~reg0.CLK
+clk => ld_a~reg0.CLK
 clk => state[0].CLK
 clk => state[1].CLK
 clk => state[2].CLK
-bt => Mux0.IN7
-bt => Mux1.IN7
-bt => Mux2.IN3
-bt => Mux2.IN4
 bt => Mux2.IN5
 bt => Mux2.IN6
 bt => Mux2.IN7
-bt => Mux1.IN5
+bt => Mux2.IN4
+bt => Mux1.IN6
+bt => Mux1.IN7
+bt => Mux0.IN7
+a_e_z => ld_a.OUTPUTSELECT
+a_e_z => ld_b.OUTPUTSELECT
+a_e_z => clr.OUTPUTSELECT
+a_e_z => cnt.OUTPUTSELECT
 a_e_z => state.OUTPUTSELECT
 a_e_z => state.OUTPUTSELECT
 a_e_z => state.OUTPUTSELECT
@@ -351,12 +361,12 @@ a_e_z => process_0.IN0
 a_e_z => process_0.IN0
 a_lt_z => process_0.IN1
 a_lt_z => process_0.IN1
-ld_a <= ld_a$latch.DB_MAX_OUTPUT_PORT_TYPE
-ld_b <= ld_b$latch.DB_MAX_OUTPUT_PORT_TYPE
-slt_a <= slt_a$latch.DB_MAX_OUTPUT_PORT_TYPE
-clr <= clr$latch.DB_MAX_OUTPUT_PORT_TYPE
-cnt <= cnt$latch.DB_MAX_OUTPUT_PORT_TYPE
-ud <= ud$latch.DB_MAX_OUTPUT_PORT_TYPE
-sub_add <= sub_add$latch.DB_MAX_OUTPUT_PORT_TYPE
+ld_a <= ld_a~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld_b <= ld_b~reg0.DB_MAX_OUTPUT_PORT_TYPE
+slt_a <= slt_a~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr <= clr~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt <= cnt~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ud <= ud~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sub_add <= sub_add~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
