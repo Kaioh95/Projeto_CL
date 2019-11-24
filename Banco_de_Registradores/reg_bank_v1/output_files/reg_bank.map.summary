@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Nov 24 19:16:52 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : reg_bank
+Top-level Entity Name : reg_bank
+Family : Cyclone IV E
+Total logic elements : 224
+    Total combinational functions : 112
+    Dedicated logic registers : 144
+Total registers : 144
+Total pins : 38
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
