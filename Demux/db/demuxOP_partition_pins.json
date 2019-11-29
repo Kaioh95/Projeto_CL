@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "slt_op[0]",
+					"strict" : false
+				},
+				{
+					"name" : "slt_op[1]",
+					"strict" : false
+				},
+				{
+					"name" : "slt_op[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rc_ops",
+					"strict" : false
+				},
+				{
+					"name" : "const_ops",
+					"strict" : false
+				},
+				{
+					"name" : "sln_ops",
+					"strict" : false
+				},
+				{
+					"name" : "nand_op",
+					"strict" : false
+				},
+				{
+					"name" : "lw_op",
+					"strict" : false
+				},
+				{
+					"name" : "sw_op",
+					"strict" : false
+				},
+				{
+					"name" : "OP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

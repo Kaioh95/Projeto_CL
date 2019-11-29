@@ -1,0 +1,566 @@
+$comment
+	File created using the following command:
+		vcd file demuxOP.msim.vcd -direction
+$end
+$date
+	Thu Nov 28 21:15:04 2019
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module demuxop_vhd_vec_tst $end
+$var wire 1 ! const_ops $end
+$var wire 1 " lw_op $end
+$var wire 1 # nand_op $end
+$var wire 1 $ OP [3] $end
+$var wire 1 % OP [2] $end
+$var wire 1 & OP [1] $end
+$var wire 1 ' OP [0] $end
+$var wire 1 ( rc_ops $end
+$var wire 1 ) sln_ops $end
+$var wire 1 * slt_op [2] $end
+$var wire 1 + slt_op [1] $end
+$var wire 1 , slt_op [0] $end
+$var wire 1 - sw_op $end
+
+$scope module i1 $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var wire 1 1 devoe $end
+$var wire 1 2 devclrn $end
+$var wire 1 3 devpor $end
+$var wire 1 4 ww_devoe $end
+$var wire 1 5 ww_devclrn $end
+$var wire 1 6 ww_devpor $end
+$var wire 1 7 ww_OP [3] $end
+$var wire 1 8 ww_OP [2] $end
+$var wire 1 9 ww_OP [1] $end
+$var wire 1 : ww_OP [0] $end
+$var wire 1 ; ww_slt_op [2] $end
+$var wire 1 < ww_slt_op [1] $end
+$var wire 1 = ww_slt_op [0] $end
+$var wire 1 > ww_rc_ops $end
+$var wire 1 ? ww_const_ops $end
+$var wire 1 @ ww_sln_ops $end
+$var wire 1 A ww_nand_op $end
+$var wire 1 B ww_lw_op $end
+$var wire 1 C ww_sw_op $end
+$var wire 1 D \slt_op[0]~output_o\ $end
+$var wire 1 E \slt_op[1]~output_o\ $end
+$var wire 1 F \slt_op[2]~output_o\ $end
+$var wire 1 G \rc_ops~output_o\ $end
+$var wire 1 H \const_ops~output_o\ $end
+$var wire 1 I \sln_ops~output_o\ $end
+$var wire 1 J \nand_op~output_o\ $end
+$var wire 1 K \lw_op~output_o\ $end
+$var wire 1 L \sw_op~output_o\ $end
+$var wire 1 M \OP[0]~input_o\ $end
+$var wire 1 N \OP[2]~input_o\ $end
+$var wire 1 O \OP[3]~input_o\ $end
+$var wire 1 P \OP[1]~input_o\ $end
+$var wire 1 Q \Mux1~0_combout\ $end
+$var wire 1 R \Mux0~0_combout\ $end
+$var wire 1 S \Mux2~0_combout\ $end
+$var wire 1 T \Mux3~0_combout\ $end
+$var wire 1 U \Mux4~0_combout\ $end
+$var wire 1 V \Mux5~0_combout\ $end
+$var wire 1 W \Mux6~0_combout\ $end
+$var wire 1 X \Mux7~0_combout\ $end
+$var wire 1 Y \ALT_INV_Mux2~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+1(
+0)
+0-
+0.
+1/
+x0
+11
+12
+13
+14
+15
+16
+1>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+1G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+1Y
+0$
+0%
+0&
+0'
+0*
+0+
+0,
+07
+08
+09
+0:
+0;
+0<
+0=
+$end
+#40000
+1'
+1:
+1M
+1S
+1T
+0Y
+1H
+0G
+1?
+0>
+1!
+0(
+#80000
+0'
+1&
+0:
+19
+1P
+0M
+0T
+1Q
+0S
+1Y
+1D
+0H
+1G
+1=
+0?
+1>
+1,
+0!
+1(
+#120000
+1'
+1:
+1M
+1S
+1T
+0Y
+1H
+0G
+1?
+0>
+1!
+0(
+#160000
+0'
+0&
+1%
+0:
+09
+18
+1N
+0P
+0M
+0Q
+1R
+0S
+0T
+1Y
+0H
+1E
+0D
+1G
+0?
+1<
+0=
+1>
+0!
+0,
+1+
+1(
+#200000
+1'
+1:
+1M
+1S
+1U
+0Y
+1I
+0G
+1@
+0>
+1)
+0(
+#240000
+0'
+1&
+0:
+19
+1P
+0M
+0U
+1Q
+0S
+1Y
+1D
+0I
+1G
+1=
+0@
+1>
+1,
+0)
+1(
+#280000
+1'
+1:
+1M
+1S
+1U
+0Y
+1I
+0G
+1@
+0>
+1)
+0(
+#320000
+0'
+0&
+0%
+1$
+0:
+09
+08
+17
+1O
+0N
+0P
+0M
+0Q
+0R
+0S
+0U
+1Y
+1F
+1;
+0I
+0E
+0D
+1*
+1G
+0@
+0<
+0=
+1>
+0)
+0,
+0+
+1(
+#360000
+1'
+1:
+1M
+1V
+1J
+1A
+1#
+#400000
+0'
+1&
+0:
+19
+1P
+0M
+1Q
+0V
+0J
+1D
+0A
+1=
+0#
+1,
+#440000
+1'
+1:
+1M
+0Q
+1R
+1E
+0D
+1<
+0=
+0,
+1+
+#480000
+0'
+0&
+1%
+0:
+09
+18
+1N
+0P
+0M
+1Q
+1S
+1W
+0Y
+1K
+1D
+0G
+1B
+1=
+0>
+1"
+1,
+0(
+#520000
+1'
+1:
+1M
+0W
+0K
+0B
+0"
+#560000
+0'
+1&
+0:
+19
+1P
+0M
+0S
+1X
+1Y
+1L
+1G
+1C
+1>
+1-
+1(
+#600000
+1'
+1:
+1M
+1S
+0X
+0Y
+0L
+0G
+0C
+0>
+0-
+0(
+#640000
+0'
+0&
+0%
+0$
+0:
+09
+08
+07
+0O
+0N
+0P
+0M
+0Q
+0R
+0S
+1Y
+0F
+0;
+0E
+0D
+0*
+1G
+0<
+0=
+1>
+0,
+0+
+1(
+#680000
+1'
+1:
+1M
+1S
+1T
+0Y
+1H
+0G
+1?
+0>
+1!
+0(
+#720000
+0'
+1&
+0:
+19
+1P
+0M
+0T
+1Q
+0S
+1Y
+1D
+0H
+1G
+1=
+0?
+1>
+1,
+0!
+1(
+#760000
+1'
+1:
+1M
+1S
+1T
+0Y
+1H
+0G
+1?
+0>
+1!
+0(
+#800000
+0'
+0&
+1%
+0:
+09
+18
+1N
+0P
+0M
+0Q
+1R
+0S
+0T
+1Y
+0H
+1E
+0D
+1G
+0?
+1<
+0=
+1>
+0!
+0,
+1+
+1(
+#840000
+1'
+1:
+1M
+1S
+1U
+0Y
+1I
+0G
+1@
+0>
+1)
+0(
+#880000
+0'
+1&
+0:
+19
+1P
+0M
+0U
+1Q
+0S
+1Y
+1D
+0I
+1G
+1=
+0@
+1>
+1,
+0)
+1(
+#920000
+1'
+1:
+1M
+1S
+1U
+0Y
+1I
+0G
+1@
+0>
+1)
+0(
+#960000
+0'
+0&
+0%
+1$
+0:
+09
+08
+17
+1O
+0N
+0P
+0M
+0Q
+0R
+0S
+0U
+1Y
+1F
+1;
+0I
+0E
+0D
+1*
+1G
+0@
+0<
+0=
+1>
+0)
+0,
+0+
+1(
+#1000000
