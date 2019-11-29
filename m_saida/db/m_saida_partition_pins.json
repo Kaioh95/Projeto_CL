@@ -1,0 +1,209 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "neg_o",
+					"strict" : false
+				},
+				{
+					"name" : "zero_o",
+					"strict" : false
+				},
+				{
+					"name" : "over_o",
+					"strict" : false
+				},
+				{
+					"name" : "endOP_o",
+					"strict" : false
+				},
+				{
+					"name" : "DS0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DS0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DS0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DS0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DS0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DS0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DS0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DS1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DS1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DS1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DS1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DS1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DS1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DS1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DS2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DS2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DS2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DS2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DS2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DS2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DS2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DS3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DS3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DS3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DS3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DS3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DS3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DS3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[15]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[2]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[4]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[5]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[6]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[7]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[8]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[9]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[10]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[11]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[12]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[13]",
+					"strict" : false
+				},
+				{
+					"name" : "result_i[14]",
+					"strict" : false
+				},
+				{
+					"name" : "over_i",
+					"strict" : false
+				},
+				{
+					"name" : "endOP_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
