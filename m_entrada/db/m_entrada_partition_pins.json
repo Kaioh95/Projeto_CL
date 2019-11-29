@@ -1,0 +1,213 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "opcode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[0]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[1]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[2]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[3]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[4]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[5]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[6]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[7]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[8]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[9]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[10]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[11]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[12]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[13]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[14]",
+					"strict" : false
+				},
+				{
+					"name" : "allbits[15]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_o",
+					"strict" : false
+				},
+				{
+					"name" : "valid_o",
+					"strict" : false
+				},
+				{
+					"name" : "operate_o",
+					"strict" : false
+				},
+				{
+					"name" : "input[12]",
+					"strict" : false
+				},
+				{
+					"name" : "input[13]",
+					"strict" : false
+				},
+				{
+					"name" : "input[14]",
+					"strict" : false
+				},
+				{
+					"name" : "input[15]",
+					"strict" : false
+				},
+				{
+					"name" : "input[9]",
+					"strict" : false
+				},
+				{
+					"name" : "input[10]",
+					"strict" : false
+				},
+				{
+					"name" : "input[11]",
+					"strict" : false
+				},
+				{
+					"name" : "input[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input[8]",
+					"strict" : false
+				},
+				{
+					"name" : "input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input[4]",
+					"strict" : false
+				},
+				{
+					"name" : "input[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "valid",
+					"strict" : false
+				},
+				{
+					"name" : "operate",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
