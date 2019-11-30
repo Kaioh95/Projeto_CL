@@ -10,9 +10,10 @@ entity pControle is
 		allbits: in std_logic_vector(15 downto 0);
 		reset, valid, operate, fimC: in std_logic;
 
-		clear, ld_A, ld_B, rd, wr, wren, c_muc, r_mux, s_mux, count: out std_logic;
+		clear, ld_A, ld_B, rd, wr, wren, c_mux, r_mux, s_mux, vd_mux, count, led_r: out std_logic;
 		slt_ula, slt_reg: out std_logic_vector(2 downto 0);
-		const: out std_logic_vector(5 downto 0)
+		const: out std_logic_vector(5 downto 0);
+		ss: out std_logic_vector(4 downto 0)
 	);
 end;
 
@@ -52,8 +53,10 @@ begin
 		when waitt =>
 			if(reset = '1') then
 				state <= init;
+				
 			elsif(valid = '1') then
 				state <= blockBT;
+				
 			elsif(operate = '1') then
 				state <= op_readRB;
 			end if;
@@ -72,22 +75,27 @@ begin
 			
 		when blockBT1 =>
 			if(valid = '0') then
-				state <= blockBT1;
-			else
 				state <= waitt;
+			else
+				state <= blockBT1;
 			end if;
 			
 		when op_readRB =>
 			if(rc_ops = '1') then
 				state <= ops_rc;
+				
 			elsif(const_ops = '1') then
 				state <= ops_const;
+				
 			elsif(sln_ops = '1') then
 				state <= shift_n;
+				
 			elsif(sw_op = '1') then
 				state <= storeW;
+				
 			elsif(lw_op = '1') then
 				state <= loadW;
+				
 			else
 				state <= waitt;
 			end if;
@@ -105,8 +113,9 @@ begin
 			state <= waitt;
 			
 		when shift_n =>
-			if(fimC = '1') then
+			if(fimC = '0') then
 				state <= shifting;
+				
 			else
 				state <= result;
 			end if;
@@ -148,6 +157,133 @@ begin
 		end case;
 	end if;
 	
+	if(state = init) then
+		clear <= '1';
+		ld_A <= '0';
+		ld_B <= '0';
+		rd <= '0';
+		wr <= '0';
+		wren <= '0';
+		c_mux <= '0';
+		r_mux <= '0';
+		s_mux <= '0';
+		vd_mux <= '0';
+		count <= '0';
+		led_r <= '0';
+		slt_ula <= "000";
+		slt_reg <= "000";
+		
+	elsif(state = waitt) then
+		clear <= '0';
+		ld_A <= '0';
+		ld_B <= '0';
+		rd <= '0';
+		wr <= '0';
+		wren <= '0';
+		c_mux <= '0';
+		r_mux <= '0';
+		s_mux <= '0';
+		vd_mux <= '0';
+		count <= '0';
+		led_r <= '0';
+		
+	elsif(state = blockBT) then
+		wr <= '1';
+		vd_mux <= '1';
+		slt_reg <= "000";
+		
+	elsif(state = vd_b) then
+		slt_reg <= "001";
+		wr <= '1';
+		vd_mux <= '1';
+		
+	elsif(state = op_readRB) then
+		slt_reg <= RB;
+		wr <= '0';
+		ld_A <= '1';
+		rd <= '1';
+	
+	elsif(state = ops_rc) then
+		c_mux <= '0';
+		slt_reg <= RC;
+		ld_A <= '0';
+		ld_B <= '1';
+		wr <= '0';
+		rd <= '0';
+	
+	elsif(state = ops_const) then
+		c_mux <= '1';
+		ld_A <= '0';
+		ld_B <= '1';
+		wr <= '0';
+	
+		
+	elsif(state = shift_n) then
+		slt_ula <= slt_op;
+		slt_reg <= RA;
+		ld_A <= '0';
+		ld_B <= '0';
+		wr <= '1';
+		count <= '0';
+	
+	elsif(state = shifting) then
+		count <= '1';
+		wr <= '0';
+		ld_A <= '1';
+		ld_B <= '0';
+		
+	elsif(state = storeW) then
+		slt_reg <= RA;
+		ld_A <= '0';
+		ld_B <= '1';
+		c_mux <= '0';
+	
+	elsif(state = storing) then
+		wren <= '1';
+		ld_B <= '0';
+	
+	elsif(state = loadw) then
+		wren <= '0';
+		r_mux <= '1';
+		slt_reg <= RA;
+		ld_A <= '0';
+		ld_B <= '0';
+		
+	elsif(state = loadRA) then
+		r_mux <= '1';
+		wr <= '1';
+	
+	elsif(state = do_op) then
+		slt_ula <= slt_op;
+		r_mux <= '0';
+		slt_reg <= RA;
+		wr <= '1';
+		ld_A <= '0';
+		ld_B <= '0';
+		
+	elsif(state = nnand) then
+		slt_ula <= "111";
+		r_mux <= '0';
+		slt_reg <= RA;
+		wr <= '1';
+		ld_A <= '1';
+		ld_B <= '1';
+	
+	elsif(state = result) then
+		s_mux <= '1';
+		vd_mux <= '0';
+		slt_reg <= RA;
+		slt_ula <= slt_op;
+		wr <= '1';
+		r_mux <= '0';
+		ld_A <= '0';
+		ld_B <= '0';
+		led_r <= '1';
+	
+	end if;
+	
 	end process;
+	const <= allbits(5 downto 0);
+	ss <= state;
 
 end ar_pControle;

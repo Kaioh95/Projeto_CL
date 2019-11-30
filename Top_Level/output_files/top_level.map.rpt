@@ -1,0 +1,771 @@
+Analysis & Synthesis report for top_level
+Sat Nov 30 19:14:57 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for ram:mem|altsyncram:ram_image_rtl_0|altsyncram_5rc1:auto_generated
+ 14. Parameter Settings for User Entity Instance: reg_bank:banco_reg
+ 15. Parameter Settings for User Entity Instance: ram:mem
+ 16. Parameter Settings for Inferred Entity Instance: ram:mem|altsyncram:ram_image_rtl_0
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "ULA:ula1"
+ 19. Port Connectivity Checks: "m_acesso:modulo_acesso"
+ 20. Port Connectivity Checks: "pControle:partControle"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Nov 30 19:14:56 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; top_level                                   ;
+; Top-level Entity Name              ; top_level                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 698                                         ;
+;     Total combinational functions  ; 586                                         ;
+;     Dedicated logic registers      ; 190                                         ;
+; Total registers                    ; 190                                         ;
+; Total pins                         ; 52                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,048,576                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; top_level          ; top_level          ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                           ;
++----------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; ../Atividade2_1/hex_7seg.vhd                       ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_1/hex_7seg.vhd                       ;         ;
+; ../Atividade2_2/FA.vhd                             ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/FA.vhd                             ;         ;
+; ../Atividade2_2/deslocador.vhd                     ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/deslocador.vhd                     ;         ;
+; ../Atividade2_2/ComponenteLogico.vhd               ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/ComponenteLogico.vhd               ;         ;
+; ../Atividade2_2/ULA.vhd                            ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/ULA.vhd                            ;         ;
+; ../Registrador/reg.vhd                             ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Registrador/reg.vhd                             ;         ;
+; ../RAM/ram.vhd                                     ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/RAM/ram.vhd                                     ;         ;
+; ../ParteDeControle/pControle.vhd                   ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd                   ;         ;
+; ../m_saida/m_saida.vhd                             ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_saida/m_saida.vhd                             ;         ;
+; ../m_entrada/m_entrada.vhd                         ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_entrada/m_entrada.vhd                         ;         ;
+; ../m_acesso/m_acesso.vhd                           ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_acesso/m_acesso.vhd                           ;         ;
+; ../Demux/demuxOP.vhd                               ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Demux/demuxOP.vhd                               ;         ;
+; ../ContadorDecrescente/countDec.vhd                ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ContadorDecrescente/countDec.vhd                ;         ;
+; ../Banco_de_Registradores/reg_bank_v1/reg_bank.vhd ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Banco_de_Registradores/reg_bank_v1/reg_bank.vhd ;         ;
+; top_level.vhd                                      ; yes             ; User VHDL File                                        ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd                         ;         ;
+; altsyncram.tdf                                     ; yes             ; Megafunction                                          ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                        ;         ;
+; stratix_ram_block.inc                              ; yes             ; Megafunction                                          ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                 ;         ;
+; lpm_mux.inc                                        ; yes             ; Megafunction                                          ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                           ;         ;
+; lpm_decode.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                        ;         ;
+; aglobal181.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                        ;         ;
+; a_rdenreg.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                         ;         ;
+; altrom.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                                            ;         ;
+; altram.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                                            ;         ;
+; altdpram.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                                          ;         ;
+; db/altsyncram_5rc1.tdf                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/db/altsyncram_5rc1.tdf                ;         ;
+; db/top_level.ram0_ram_1d0cf.hdl.mif                ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/db/top_level.ram0_ram_1d0cf.hdl.mif   ;         ;
+; db/decode_rsa.tdf                                  ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/db/decode_rsa.tdf                     ;         ;
+; db/decode_k8a.tdf                                  ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/db/decode_k8a.tdf                     ;         ;
+; db/mux_qob.tdf                                     ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/db/mux_qob.tdf                        ;         ;
++----------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 698         ;
+;                                             ;             ;
+; Total combinational functions               ; 586         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 396         ;
+;     -- 3 input functions                    ; 136         ;
+;     -- <=2 input functions                  ; 54          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 566         ;
+;     -- arithmetic mode                      ; 20          ;
+;                                             ;             ;
+; Total registers                             ; 190         ;
+;     -- Dedicated logic registers            ; 190         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 52          ;
+; Total memory bits                           ; 1048576     ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 318         ;
+; Total fan-out                               ; 4910        ;
+; Average fan-out                             ; 4.87        ;
++---------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                          ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                 ; Entity Name      ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+------------------+--------------+
+; |top_level                                ; 586 (147)           ; 190 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 52   ; 0            ; |top_level                                                                                          ; top_level        ; work         ;
+;    |ULA:ula1|                             ; 112 (2)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1                                                                                 ; ULA              ; work         ;
+;       |ComponenteLogico:l10|              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l10                                                            ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l11|              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l11                                                            ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l12|              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l12                                                            ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l13|              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l13                                                            ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l14|              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l14                                                            ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l15|              ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l15                                                            ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l1|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l1                                                             ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l2|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l2                                                             ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l3|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l3                                                             ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l4|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l4                                                             ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l5|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l5                                                             ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l6|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l6                                                             ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l7|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l7                                                             ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l8|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l8                                                             ; ComponenteLogico ; work         ;
+;       |ComponenteLogico:l9|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|ComponenteLogico:l9                                                             ; ComponenteLogico ; work         ;
+;       |FA:o0|                             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o0                                                                           ; FA               ; work         ;
+;       |FA:o10|                            ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o10                                                                          ; FA               ; work         ;
+;       |FA:o11|                            ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o11                                                                          ; FA               ; work         ;
+;       |FA:o12|                            ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o12                                                                          ; FA               ; work         ;
+;       |FA:o13|                            ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o13                                                                          ; FA               ; work         ;
+;       |FA:o14|                            ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o14                                                                          ; FA               ; work         ;
+;       |FA:o1|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o1                                                                           ; FA               ; work         ;
+;       |FA:o2|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o2                                                                           ; FA               ; work         ;
+;       |FA:o3|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o3                                                                           ; FA               ; work         ;
+;       |FA:o4|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o4                                                                           ; FA               ; work         ;
+;       |FA:o5|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o5                                                                           ; FA               ; work         ;
+;       |FA:o6|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o6                                                                           ; FA               ; work         ;
+;       |FA:o7|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o7                                                                           ; FA               ; work         ;
+;       |FA:o8|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o8                                                                           ; FA               ; work         ;
+;       |FA:o9|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|FA:o9                                                                           ; FA               ; work         ;
+;       |deslocador:shift|                  ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ULA:ula1|deslocador:shift                                                                ; deslocador       ; work         ;
+;    |countDec:contador_dec|                ; 15 (15)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|countDec:contador_dec                                                                    ; countDec         ; work         ;
+;    |demuxOP:demux|                        ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|demuxOP:demux                                                                            ; demuxOP          ; work         ;
+;    |m_saida:mod_saida|                    ; 34 (6)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|m_saida:mod_saida                                                                        ; m_saida          ; work         ;
+;       |hex_7seg:display0|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|m_saida:mod_saida|hex_7seg:display0                                                      ; hex_7seg         ; work         ;
+;       |hex_7seg:display1|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|m_saida:mod_saida|hex_7seg:display1                                                      ; hex_7seg         ; work         ;
+;       |hex_7seg:display2|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|m_saida:mod_saida|hex_7seg:display2                                                      ; hex_7seg         ; work         ;
+;       |hex_7seg:display3|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|m_saida:mod_saida|hex_7seg:display3                                                      ; hex_7seg         ; work         ;
+;    |pControle:partControle|               ; 112 (112)           ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|pControle:partControle                                                                   ; pControle        ; work         ;
+;    |ram:mem|                              ; 16 (0)              ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ram:mem                                                                                  ; ram              ; work         ;
+;       |altsyncram:ram_image_rtl_0|        ; 16 (0)              ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ram:mem|altsyncram:ram_image_rtl_0                                                       ; altsyncram       ; work         ;
+;          |altsyncram_5rc1:auto_generated| ; 16 (0)              ; 3 (3)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ram:mem|altsyncram:ram_image_rtl_0|altsyncram_5rc1:auto_generated                        ; altsyncram_5rc1  ; work         ;
+;             |decode_k8a:rden_decode|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ram:mem|altsyncram:ram_image_rtl_0|altsyncram_5rc1:auto_generated|decode_k8a:rden_decode ; decode_k8a       ; work         ;
+;             |decode_rsa:decode3|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|ram:mem|altsyncram:ram_image_rtl_0|altsyncram_5rc1:auto_generated|decode_rsa:decode3     ; decode_rsa       ; work         ;
+;    |reg:reg_A|                            ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|reg:reg_A                                                                                ; reg              ; work         ;
+;    |reg:reg_B|                            ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|reg:reg_B                                                                                ; reg              ; work         ;
+;    |reg_bank:banco_reg|                   ; 112 (112)           ; 144 (144)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|reg_bank:banco_reg                                                                       ; reg_bank         ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                              ;
++------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+-------------------------------------+
+; Name                                                                         ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF                                 ;
++------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+-------------------------------------+
+; ram:mem|altsyncram:ram_image_rtl_0|altsyncram_5rc1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 65536        ; 16           ; --           ; --           ; 1048576 ; db/top_level.ram0_ram_1d0cf.hdl.mif ;
++------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                              ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal               ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+; pControle:partControle|slt_ula[0]                   ; pControle:partControle|slt_ula[2] ; yes                    ;
+; pControle:partControle|slt_ula[1]                   ; pControle:partControle|slt_ula[2] ; yes                    ;
+; pControle:partControle|slt_ula[2]                   ; pControle:partControle|slt_ula[2] ; yes                    ;
+; pControle:partControle|s_mux                        ; pControle:partControle|Equal15    ; yes                    ;
+; pControle:partControle|led_r                        ; pControle:partControle|Equal15    ; yes                    ;
+; pControle:partControle|ld_A                         ; pControle:partControle|ld_A       ; yes                    ;
+; pControle:partControle|clear                        ; GND                               ; yes                    ;
+; pControle:partControle|ld_B                         ; pControle:partControle|ld_B       ; yes                    ;
+; pControle:partControle|c_mux                        ; pControle:partControle|c_mux      ; yes                    ;
+; pControle:partControle|slt_reg[1]                   ; pControle:partControle|slt_reg[2] ; yes                    ;
+; pControle:partControle|slt_reg[0]                   ; pControle:partControle|slt_reg[2] ; yes                    ;
+; pControle:partControle|slt_reg[2]                   ; pControle:partControle|slt_reg[2] ; yes                    ;
+; pControle:partControle|count                        ; pControle:partControle|count      ; yes                    ;
+; pControle:partControle|rd                           ; pControle:partControle|rd         ; yes                    ;
+; pControle:partControle|r_mux                        ; pControle:partControle|r_mux      ; yes                    ;
+; pControle:partControle|vd_mux                       ; pControle:partControle|Equal15    ; yes                    ;
+; pControle:partControle|wr                           ; pControle:partControle|wr         ; yes                    ;
+; pControle:partControle|wren                         ; pControle:partControle|wren       ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                                   ;                        ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 190   ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 166   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions           ;
++-----------------------+-------------------------+------+
+; Register Name         ; Megafunction            ; Type ;
++-----------------------+-------------------------+------+
+; ram:mem|data_o[0..15] ; ram:mem|ram_image_rtl_0 ; RAM  ;
++-----------------------+-------------------------+------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|reg:reg_A|q[5]                      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|reg_bank:banco_reg|reg_image[0][10] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|reg_bank:banco_reg|reg_image[1][7]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|reg_bank:banco_reg|reg_image[2][3]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|reg_bank:banco_reg|reg_image[3][3]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|reg_bank:banco_reg|reg_image[4][8]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|reg_bank:banco_reg|reg_image[5][4]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|reg_bank:banco_reg|reg_image[6][6]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|reg_bank:banco_reg|reg_image[7][14] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top_level|reg:reg_B|q[9]                      ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |top_level|reg:reg_B|q[0]                      ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |top_level|reg_bank:banco_reg|data_o[13]       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |top_level|countDec:contador_dec|valor[5]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top_level|banco_regs_i[2]                     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |top_level|pControle:partControle|slt_reg[0]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Source assignments for ram:mem|altsyncram:ram_image_rtl_0|altsyncram_5rc1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------+
+; Assignment                      ; Value              ; From ; To                         ;
++---------------------------------+--------------------+------+----------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                          ;
++---------------------------------+--------------------+------+----------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg_bank:banco_reg ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                         ;
+; ADDR_WIDTH     ; 3     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram:mem ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer              ;
+; ADDR_WIDTH     ; 16    ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ram:mem|altsyncram:ram_image_rtl_0       ;
++------------------------------------+-------------------------------------+----------------+
+; Parameter Name                     ; Value                               ; Type           ;
++------------------------------------+-------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                   ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                  ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                 ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                  ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                 ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                   ; Untyped        ;
+; OPERATION_MODE                     ; SINGLE_PORT                         ; Untyped        ;
+; WIDTH_A                            ; 16                                  ; Untyped        ;
+; WIDTHAD_A                          ; 16                                  ; Untyped        ;
+; NUMWORDS_A                         ; 65536                               ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                        ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                ; Untyped        ;
+; WIDTH_B                            ; 1                                   ; Untyped        ;
+; WIDTHAD_B                          ; 1                                   ; Untyped        ;
+; NUMWORDS_B                         ; 1                                   ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                              ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                              ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                              ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                              ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                        ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                              ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                   ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                   ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                ; Untyped        ;
+; BYTE_SIZE                          ; 8                                   ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                           ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; OLD_DATA                            ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                ; Untyped        ;
+; INIT_FILE                          ; db/top_level.ram0_ram_1d0cf.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                              ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                   ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                              ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                              ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                              ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                              ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                     ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                     ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                               ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                               ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                   ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                        ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_5rc1                     ; Untyped        ;
++------------------------------------+-------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                               ;
++-------------------------------------------+------------------------------------+
+; Name                                      ; Value                              ;
++-------------------------------------------+------------------------------------+
+; Number of entity instances                ; 1                                  ;
+; Entity Instance                           ; ram:mem|altsyncram:ram_image_rtl_0 ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                        ;
+;     -- WIDTH_A                            ; 16                                 ;
+;     -- NUMWORDS_A                         ; 65536                              ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                       ;
+;     -- WIDTH_B                            ; 1                                  ;
+;     -- NUMWORDS_B                         ; 1                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                          ;
++-------------------------------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULA:ula1"                                                                          ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "m_acesso:modulo_acesso"                                                               ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; data_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pControle:partControle"                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; ss   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 52                          ;
+; cycloneiii_ff         ; 190                         ;
+;     ENA               ; 160                         ;
+;     ENA SCLR          ; 6                           ;
+;     plain             ; 24                          ;
+; cycloneiii_lcell_comb ; 594                         ;
+;     arith             ; 20                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 6                           ;
+;     normal            ; 574                         ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 38                          ;
+;         3 data inputs ; 130                         ;
+;         4 data inputs ; 396                         ;
+; cycloneiii_ram_block  ; 128                         ;
+;                       ;                             ;
+; Max LUT depth         ; 22.00                       ;
+; Average LUT depth     ; 6.43                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:28     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat Nov 30 19:13:25 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level -c top_level
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/atividade2_1/hex_7seg.vhd
+    Info (12022): Found design unit 1: hex_7seg-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_1/hex_7seg.vhd Line: 11
+    Info (12023): Found entity 1: hex_7seg File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_1/hex_7seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/atividade2_2/fa.vhd
+    Info (12022): Found design unit 1: FA-arc File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/FA.vhd Line: 11
+    Info (12023): Found entity 1: FA File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/FA.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/atividade2_2/deslocador.vhd
+    Info (12022): Found design unit 1: deslocador-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/deslocador.vhd Line: 12
+    Info (12023): Found entity 1: deslocador File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/deslocador.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/atividade2_2/componentelogico.vhd
+    Info (12022): Found design unit 1: ComponenteLogico-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/ComponenteLogico.vhd Line: 12
+    Info (12023): Found entity 1: ComponenteLogico File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/ComponenteLogico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/atividade2_2/ula.vhd
+    Info (12022): Found design unit 1: ULA-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/ULA.vhd Line: 14
+    Info (12023): Found entity 1: ULA File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/ULA.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/registrador/reg.vhd
+    Info (12022): Found design unit 1: reg-arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Registrador/reg.vhd Line: 12
+    Info (12023): Found entity 1: reg File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Registrador/reg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/ram/ram.vhd
+    Info (12022): Found design unit 1: ram-ram_arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/RAM/ram.vhd Line: 19
+    Info (12023): Found entity 1: ram File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/RAM/ram.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/partedecontrole/pcontrole.vhd
+    Info (12022): Found design unit 1: pControle-ar_pControle File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 20
+    Info (12023): Found entity 1: pControle File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/m_saida/m_saida.vhd
+    Info (12022): Found design unit 1: m_saida-ar_m_saida File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_saida/m_saida.vhd Line: 23
+    Info (12023): Found entity 1: m_saida File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_saida/m_saida.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/m_entrada/m_entrada.vhd
+    Info (12022): Found design unit 1: m_entrada-ar_m_entrada File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_entrada/m_entrada.vhd Line: 21
+    Info (12023): Found entity 1: m_entrada File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_entrada/m_entrada.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/m_acesso/m_acesso.vhd
+    Info (12022): Found design unit 1: m_acesso-ar_m_acesso File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_acesso/m_acesso.vhd Line: 17
+    Info (12023): Found entity 1: m_acesso File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_acesso/m_acesso.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/demux/demuxop.vhd
+    Info (12022): Found design unit 1: demuxOP-arcDemuxOP File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Demux/demuxOP.vhd Line: 18
+    Info (12023): Found entity 1: demuxOP File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Demux/demuxOP.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/contadordecrescente/countdec.vhd
+    Info (12022): Found design unit 1: countDec-ar_countDec File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ContadorDecrescente/countDec.vhd Line: 14
+    Info (12023): Found entity 1: countDec File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ContadorDecrescente/countDec.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/documents/quarto_semestre/circuitos_logicos/projeto_cl/banco_de_registradores/reg_bank_v1/reg_bank.vhd
+    Info (12022): Found design unit 1: reg_bank-regs_arch File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Banco_de_Registradores/reg_bank_v1/reg_bank.vhd Line: 20
+    Info (12023): Found entity 1: reg_bank File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Banco_de_Registradores/reg_bank_v1/reg_bank.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
+    Info (12022): Found design unit 1: top_level-ar_top_level File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 23
+    Info (12023): Found entity 1: top_level File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 6
+Info (12127): Elaborating entity "top_level" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top_level.vhd(159): object "ss" assigned a value but never read File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 159
+Warning (10036): Verilog HDL or VHDL warning at top_level.vhd(170): object "s_acesso_para_ram" assigned a value but never read File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at top_level.vhd(288): signal "banco_regs_o" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 288
+Warning (10492): VHDL Process Statement warning at top_level.vhd(290): signal "const" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 290
+Warning (10492): VHDL Process Statement warning at top_level.vhd(294): signal "saida_ram_para_banco" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 294
+Warning (10492): VHDL Process Statement warning at top_level.vhd(296): signal "saida_ula" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 296
+Warning (10492): VHDL Process Statement warning at top_level.vhd(300): signal "saida_ula" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 300
+Warning (10492): VHDL Process Statement warning at top_level.vhd(302): signal "allbits_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 302
+Warning (10492): VHDL Process Statement warning at top_level.vhd(306): signal "allbits_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 306
+Info (12128): Elaborating entity "m_entrada" for hierarchy "m_entrada:entrada" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 183
+Info (12128): Elaborating entity "demuxOP" for hierarchy "demuxOP:demux" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 191
+Info (12128): Elaborating entity "pControle" for hierarchy "pControle:partControle" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 198
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "clear", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "ld_A", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "ld_B", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "rd", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "wr", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "wren", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "c_mux", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "r_mux", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "s_mux", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "vd_mux", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "count", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "led_r", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "slt_ula", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "slt_reg", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_reg[0]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_reg[1]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_reg[2]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_ula[0]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_ula[1]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_ula[2]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "led_r" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "count" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "vd_mux" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "s_mux" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "r_mux" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "c_mux" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "wren" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "wr" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "rd" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "ld_B" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "ld_A" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "clear" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (12128): Elaborating entity "reg_bank" for hierarchy "reg_bank:banco_reg" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 211
+Info (12128): Elaborating entity "countDec" for hierarchy "countDec:contador_dec" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 216
+Info (12128): Elaborating entity "m_acesso" for hierarchy "m_acesso:modulo_acesso" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 222
+Info (12128): Elaborating entity "reg" for hierarchy "reg:reg_A" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 234
+Info (12128): Elaborating entity "ram" for hierarchy "ram:mem" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 248
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula1" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 257
+Info (12128): Elaborating entity "ComponenteLogico" for hierarchy "ULA:ula1|ComponenteLogico:l0" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/ULA.vhd Line: 46
+Info (12128): Elaborating entity "FA" for hierarchy "ULA:ula1|FA:o0" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/ULA.vhd Line: 47
+Info (12128): Elaborating entity "deslocador" for hierarchy "ULA:ula1|deslocador:shift" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Atividade2_2/ULA.vhd Line: 98
+Info (12128): Elaborating entity "m_saida" for hierarchy "m_saida:mod_saida" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/top_level.vhd Line: 266
+Info (12128): Elaborating entity "hex_7seg" for hierarchy "m_saida:mod_saida|hex_7seg:display0" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/m_saida/m_saida.vhd Line: 39
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ram:mem|ram_image_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 16
+        Info (286033): Parameter NUMWORDS_A set to 65536
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_PORT_A set to OLD_DATA
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/top_level.ram0_ram_1d0cf.hdl.mif
+Info (12130): Elaborated megafunction instantiation "ram:mem|altsyncram:ram_image_rtl_0"
+Info (12133): Instantiated megafunction "ram:mem|altsyncram:ram_image_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "16"
+    Info (12134): Parameter "NUMWORDS_A" = "65536"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_PORT_A" = "OLD_DATA"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/top_level.ram0_ram_1d0cf.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5rc1.tdf
+    Info (12023): Found entity 1: altsyncram_5rc1 File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/db/altsyncram_5rc1.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_rsa.tdf
+    Info (12023): Found entity 1: decode_rsa File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/db/decode_rsa.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_k8a.tdf
+    Info (12023): Found entity 1: decode_k8a File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/db/decode_k8a.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qob.tdf
+    Info (12023): Found entity 1: mux_qob File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/db/mux_qob.tdf Line: 22
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch pControle:partControle|slt_ula[0] has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|slt_ula[1] has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|slt_ula[2] has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|s_mux has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|led_r has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|ld_A has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|ld_B has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[1] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|c_mux has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[2] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|slt_reg[1] has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|slt_reg[0] has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|slt_reg[2] has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|count has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[1] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[1] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|rd has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|r_mux has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|vd_mux has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal pControle:partControle|state[2] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|wr has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch pControle:partControle|wren has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pControle:partControle|state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 897 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 717 logic cells
+    Info (21064): Implemented 128 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
+    Info: Peak virtual memory: 708 megabytes
+    Info: Processing ended: Sat Nov 30 19:14:57 2019
+    Info: Elapsed time: 00:01:32
+    Info: Total CPU time (on all processors): 00:02:45
+
+

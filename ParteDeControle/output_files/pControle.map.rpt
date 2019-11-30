@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pControle
-Fri Nov 29 22:56:04 2019
+Sat Nov 30 15:31:09 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +44,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 29 22:56:03 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 30 15:31:09 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; pControle                                   ;
 ; Top-level Entity Name              ; pControle                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 61                                          ;
+; Total logic elements               ; 110                                         ;
+;     Total combinational functions  ; 110                                         ;
+;     Dedicated logic registers      ; 5                                           ;
+; Total registers                    ; 5                                           ;
+; Total pins                         ; 68                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -154,10 +156,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -170,35 +173,36 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-;                                             ;           ;
-; Total combinational functions               ; 0         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 0         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 0         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 0         ;
-;     -- Dedicated logic registers            ; 0         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 61        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; slt_op[0] ;
-; Maximum fan-out                             ; 1         ;
-; Total fan-out                               ; 61        ;
-; Average fan-out                             ; 0.50      ;
-+---------------------------------------------+-----------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 110      ;
+;                                             ;          ;
+; Total combinational functions               ; 110      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 80       ;
+;     -- 3 input functions                    ; 15       ;
+;     -- <=2 input functions                  ; 15       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 110      ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 5        ;
+;     -- Dedicated logic registers            ; 5        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 68       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; state[2] ;
+; Maximum fan-out                             ; 43       ;
+; Total fan-out                               ; 502      ;
+; Average fan-out                             ; 2.00     ;
++---------------------------------------------+----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -206,9 +210,37 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |pControle                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |pControle          ; pControle   ; work         ;
+; |pControle                 ; 110 (110)           ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |pControle          ; pControle   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; clear$latch                                         ; GND                 ; yes                    ;
+; ld_A$latch                                          ; ld_A                ; yes                    ;
+; ld_B$latch                                          ; ld_B                ; yes                    ;
+; rd$latch                                            ; rd                  ; yes                    ;
+; wr$latch                                            ; wr                  ; yes                    ;
+; wren$latch                                          ; wren                ; yes                    ;
+; c_mux$latch                                         ; c_mux               ; yes                    ;
+; r_mux$latch                                         ; r_mux               ; yes                    ;
+; s_mux$latch                                         ; Equal15             ; yes                    ;
+; vd_mux$latch                                        ; Equal15             ; yes                    ;
+; count$latch                                         ; count               ; yes                    ;
+; led_r$latch                                         ; Equal15             ; yes                    ;
+; slt_ula[0]$latch                                    ; slt_ula[2]          ; yes                    ;
+; slt_ula[1]$latch                                    ; slt_ula[2]          ; yes                    ;
+; slt_ula[2]$latch                                    ; slt_ula[2]          ; yes                    ;
+; slt_reg[0]$latch                                    ; slt_reg[2]          ; yes                    ;
+; slt_reg[1]$latch                                    ; slt_reg[2]          ; yes                    ;
+; slt_reg[2]$latch                                    ; slt_reg[2]          ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -216,7 +248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 5     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -226,18 +258,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |pControle|slt_reg[0]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 61                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; boundary_port         ; 68                          ;
+; cycloneiii_ff         ; 5                           ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 110                         ;
+;     normal            ; 110                         ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 80                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.30                        ;
 +-----------------------+-----------------------------+
 
 
@@ -256,78 +301,98 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 29 22:54:47 2019
+    Info: Processing started: Sat Nov 30 15:30:48 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pControle -c pControle
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file pcontrole.vhd
-    Info (12022): Found design unit 1: pControle-ar_pControle File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 19
+    Info (12022): Found design unit 1: pControle-ar_pControle File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 20
     Info (12023): Found entity 1: pControle File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 4
 Info (12127): Elaborating entity "pControle" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "clear" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "ld_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "ld_B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "rd" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "wr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "wren" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "c_muc" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "r_mux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "s_mux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(13): used implicit default value for signal "count" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(14): used implicit default value for signal "slt_ula" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 14
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(14): used implicit default value for signal "slt_reg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 14
-Warning (10541): VHDL Signal Declaration warning at pControle.vhd(15): used implicit default value for signal "const" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 15
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "clear" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "ld_A" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "ld_B" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "rd" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "wr" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "wren" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "c_muc" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "r_mux" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "s_mux" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "count" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 13
-    Warning (13410): Pin "slt_ula[0]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 14
-    Warning (13410): Pin "slt_ula[1]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 14
-    Warning (13410): Pin "slt_ula[2]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 14
-    Warning (13410): Pin "slt_reg[0]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 14
-    Warning (13410): Pin "slt_reg[1]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 14
-    Warning (13410): Pin "slt_reg[2]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 14
-    Warning (13410): Pin "const[0]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 15
-    Warning (13410): Pin "const[1]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 15
-    Warning (13410): Pin "const[2]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 15
-    Warning (13410): Pin "const[3]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 15
-    Warning (13410): Pin "const[4]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 15
-    Warning (13410): Pin "const[5]" is stuck at GND File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "clear", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "ld_A", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "ld_B", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "rd", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "wr", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "wren", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "c_mux", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "r_mux", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "s_mux", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "vd_mux", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "count", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "led_r", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "slt_ula", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at pControle.vhd(44): inferring latch(es) for signal or variable "slt_reg", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_reg[0]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_reg[1]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_reg[2]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_ula[0]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_ula[1]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "slt_ula[2]" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "led_r" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "count" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "vd_mux" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "s_mux" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "r_mux" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "c_mux" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "wren" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "wr" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "rd" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "ld_B" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "ld_A" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Info (10041): Inferred latch for "clear" at pControle.vhd(44) File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+Warning (13012): Latch ld_A$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch ld_B$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch rd$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch wr$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch wren$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch c_mux$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[2] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch r_mux$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch s_mux$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch vd_mux$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[2] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch count$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch led_r$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch slt_ula[0]$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch slt_ula[1]$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch slt_ula[2]$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch slt_reg[0]$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch slt_reg[1]$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Warning (13012): Latch slt_reg[2]$latch has unsafe behavior File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 46
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 39 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "slt_op[0]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 6
-    Warning (15610): No output dependent on input pin "slt_op[1]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 6
-    Warning (15610): No output dependent on input pin "slt_op[2]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 6
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 7
-    Warning (15610): No output dependent on input pin "rc_ops" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 7
-    Warning (15610): No output dependent on input pin "const_ops" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 7
-    Warning (15610): No output dependent on input pin "sln_ops" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 7
-    Warning (15610): No output dependent on input pin "nand_op" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 7
-    Warning (15610): No output dependent on input pin "lw_op" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 7
-    Warning (15610): No output dependent on input pin "sw_op" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 7
-    Warning (15610): No output dependent on input pin "RA[0]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 9
-    Warning (15610): No output dependent on input pin "RA[1]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 9
-    Warning (15610): No output dependent on input pin "RA[2]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 9
-    Warning (15610): No output dependent on input pin "RB[0]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 9
-    Warning (15610): No output dependent on input pin "RB[1]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 9
-    Warning (15610): No output dependent on input pin "RB[2]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 9
-    Warning (15610): No output dependent on input pin "RC[0]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 9
-    Warning (15610): No output dependent on input pin "RC[1]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 9
-    Warning (15610): No output dependent on input pin "RC[2]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 9
-    Warning (15610): No output dependent on input pin "allbits[0]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
-    Warning (15610): No output dependent on input pin "allbits[1]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
-    Warning (15610): No output dependent on input pin "allbits[2]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
-    Warning (15610): No output dependent on input pin "allbits[3]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
-    Warning (15610): No output dependent on input pin "allbits[4]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
-    Warning (15610): No output dependent on input pin "allbits[5]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "allbits[6]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
     Warning (15610): No output dependent on input pin "allbits[7]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
     Warning (15610): No output dependent on input pin "allbits[8]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
@@ -338,17 +403,14 @@ Warning (21074): Design contains 39 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "allbits[13]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
     Warning (15610): No output dependent on input pin "allbits[14]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
     Warning (15610): No output dependent on input pin "allbits[15]" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 10
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 11
-    Warning (15610): No output dependent on input pin "valid" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 11
-    Warning (15610): No output dependent on input pin "operate" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 11
-    Warning (15610): No output dependent on input pin "fimC" File: C:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/ParteDeControle/pControle.vhd Line: 11
-Info (21057): Implemented 61 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 178 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 39 input pins
-    Info (21059): Implemented 22 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
-    Info: Peak virtual memory: 666 megabytes
-    Info: Processing ended: Fri Nov 29 22:56:04 2019
-    Info: Elapsed time: 00:01:17
-    Info: Total CPU time (on all processors): 00:02:32
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 110 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 650 megabytes
+    Info: Processing ended: Sat Nov 30 15:31:09 2019
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:45
 
 

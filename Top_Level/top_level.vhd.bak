@@ -1,0 +1,150 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity top_level is
+	port(
+		reset, valid, operate: std_logic;
+		input: std_logic_vector(15 downto 0);
+		
+		Rhex0: out std_logic_vector(6 downto 0);
+		Rhex1: out std_logic_vector(6 downto 0);
+		Rhex2: out std_logic_vector(6 downto 0);
+		Rhex3: out std_logic_vector(6 downto 0);
+		
+		neg_o: out std_logic;
+		zero_o: out std_logic;
+		over_o: out std_logic;
+		endOP_o: out std_logic;
+	);
+end;
+
+architecture ar_top_level of top_level is
+
+component ULA
+	port(
+		A, B: in std_logic_vector (15 downto 0);
+		M, S1, S0: in std_logic; -- SELETOR
+		Cin: inout std_logic;
+		Cout: out std_logic;
+		SAIDA: out std_logic_vector (15 downto 0)
+	);
+end component;
+	
+component reg_bank
+	port (
+        clock  : in std_logic;
+        wr   	: in std_logic;
+		  clear	: in std_logic;
+        addr   : in std_logic_vector(ADDR_WIDTH - 1 downto 0);
+        data_i : in std_logic_vector(DATA_WIDTH - 1 downto 0);
+        data_o : out std_logic_vector(DATA_WIDTH - 1 downto 0)
+    );
+end component;
+
+component countDec
+	port(
+		i: in std_logic_vector(5 downto 0);
+		rd, count, clear, clk: in std_logic;
+		fc: out std_logic
+	);
+end component;
+
+component demuxOP
+	port(
+		OP: in std_logic_vector (3 downto 0);
+		slt_op: out std_logic_vector (2 downto 0);
+		rc_ops: out std_logic;
+		const_ops: out std_logic;
+		sln_ops: out std_logic;
+		nand_op: out std_logic;
+		lw_op: out std_logic;
+		sw_op: out std_logic
+	);
+end component;
+
+component m_acesso
+	port(
+		r_data_i: in std_logic_vector(15 downto 0);
+		r_data_o: out std_logic_vector(15 downto 0);
+		data_i: in std_logic_vector(15 downto 0);
+		data_o: out std_logic_vector(15 downto 0);
+		addr_i: in std_logic_vector(15 downto 0);
+		addr_o: out std_logic_vector(15 downto 0);
+		wren_i: in std_logic;
+		wren_o: out std_logic
+	);
+end component;
+
+component entity m_entrada
+	port(
+		reset: in std_logic;
+		valid: in std_logic;
+		operate: in std_logic;
+		input: in std_logic_vector(15 downto 0);
+		opcode: out std_logic_vector(3 downto 0);
+		RA: out std_logic_vector(2 downto 0);
+		RB: out std_logic_vector(2 downto 0);
+		RC: out std_logic_vector(2 downto 0);
+		allbits: out std_logic_vector(15 downto 0);
+		reset_o: out std_logic;
+		valid_o: out std_logic;
+		operate_o: out std_logic
+	);
+end component;
+
+component entity m_saida
+	port(
+		result_i: in std_logic_vector(15 downto 0);
+		over_i: in std_logic;
+		endOP_i: in std_logic;
+		
+		neg_o: out std_logic;
+		zero_o: out std_logic;
+		over_o: out std_logic;
+		endOP_o: out std_logic;
+		
+		DS0: out std_logic_vector(6 downto 0);
+		DS1: out std_logic_vector(6 downto 0);
+		DS2: out std_logic_vector(6 downto 0);
+		DS3: out std_logic_vector(6 downto 0)
+	);
+end component;
+
+component pControle
+	port(
+		slt_op: in std_logic_vector (2 downto 0);
+		clk, rc_ops, const_ops, sln_ops, nand_op, lw_op, sw_op: in std_logic;
+		
+		RA, RB, RC: in std_logic_vector(2 downto 0);
+		allbits: in std_logic_vector(15 downto 0);
+		reset, valid, operate, fimC: in std_logic;
+
+		clear, ld_A, ld_B, rd, wr, wren, c_mux, r_mux, s_mux, vd_mux, count, led_r: out std_logic;
+		slt_ula, slt_reg: out std_logic_vector(2 downto 0);
+		const: out std_logic_vector(5 downto 0);
+		ss: out std_logic_vector(4 downto 0)
+	);
+end component;
+
+component ram
+    port (
+        clock  : in std_logic;
+        wren   : in std_logic;
+        addr   : in std_logic_vector(ADDR_WIDTH - 1 downto 0);
+        data_i : in std_logic_vector(DATA_WIDTH - 1 downto 0);
+        data_o : out std_logic_vector(DATA_WIDTH - 1 downto 0)
+    );
+end component;
+
+component reg
+	port(
+		i: in std_logic_vector(15 downto 0);
+		clk, clr, rw: in std_logic;
+		q: out std_logic_vector(15 downto 0)
+	);
+end component;
+
+
+begin
+	
+end ar_top_level;

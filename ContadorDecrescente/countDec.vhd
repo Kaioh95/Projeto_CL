@@ -7,7 +7,6 @@ entity countDec is
 	port(
 		i: in std_logic_vector(5 downto 0);
 		rd, count, clear, clk: in std_logic;
-		s: out std_logic_vector(5 downto 0);
 		fc: out std_logic
 	);
 end;
@@ -41,6 +40,5 @@ begin
 			fc <= '0';
 		end if;
 		
-		s <= valor;
 	end process;
 end ar_countDec;

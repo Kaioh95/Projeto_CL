@@ -1,0 +1,217 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Rhex0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rhex3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led_neg",
+					"strict" : false
+				},
+				{
+					"name" : "led_zero",
+					"strict" : false
+				},
+				{
+					"name" : "led_over",
+					"strict" : false
+				},
+				{
+					"name" : "led_endOP",
+					"strict" : false
+				},
+				{
+					"name" : "input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input[4]",
+					"strict" : false
+				},
+				{
+					"name" : "input[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input[8]",
+					"strict" : false
+				},
+				{
+					"name" : "input[9]",
+					"strict" : false
+				},
+				{
+					"name" : "input[10]",
+					"strict" : false
+				},
+				{
+					"name" : "input[11]",
+					"strict" : false
+				},
+				{
+					"name" : "input[12]",
+					"strict" : false
+				},
+				{
+					"name" : "input[13]",
+					"strict" : false
+				},
+				{
+					"name" : "input[14]",
+					"strict" : false
+				},
+				{
+					"name" : "input[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "valid",
+					"strict" : false
+				},
+				{
+					"name" : "operate",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
