@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 29 21:20:11 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : countDec
+Top-level Entity Name : countDec
+Family : Cyclone IV E
+Total logic elements : 9
+    Total combinational functions : 9
+    Dedicated logic registers : 6
+Total registers : 6
+Total pins : 17
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,40 @@
+|countDec
+i[0] => valor.DATAB
+i[1] => valor.DATAB
+i[2] => valor.DATAB
+i[3] => valor.DATAB
+i[4] => valor.DATAB
+i[5] => valor.DATAB
+rd => valor.OUTPUTSELECT
+rd => valor.OUTPUTSELECT
+rd => valor.OUTPUTSELECT
+rd => valor.OUTPUTSELECT
+rd => valor.OUTPUTSELECT
+rd => valor.OUTPUTSELECT
+count => valor.OUTPUTSELECT
+count => valor.OUTPUTSELECT
+count => valor.OUTPUTSELECT
+count => valor.OUTPUTSELECT
+count => valor.OUTPUTSELECT
+count => valor.OUTPUTSELECT
+clear => valor.OUTPUTSELECT
+clear => valor.OUTPUTSELECT
+clear => valor.OUTPUTSELECT
+clear => valor.OUTPUTSELECT
+clear => valor.OUTPUTSELECT
+clear => valor.OUTPUTSELECT
+clk => valor[0].CLK
+clk => valor[1].CLK
+clk => valor[2].CLK
+clk => valor[3].CLK
+clk => valor[4].CLK
+clk => valor[5].CLK
+s[0] <= valor[0].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= valor[1].DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= valor[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= valor[3].DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= valor[4].DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= valor[5].DB_MAX_OUTPUT_PORT_TYPE
+fc <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
