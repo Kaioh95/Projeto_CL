@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Usuario/Documents/Quarto_semestre/Circuitos_logicos/Projeto_CL/Top_Level/simulation/qsim
+Ehard_block
+Z1 w1575246308
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+R0
+Z8 8top_level.vho
+Z9 Ftop_level.vho
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1575246312
+!i10b 1
+Z12 !s108 1575246312.000000
+Z13 !s90 -work|work|top_level.vho|
+Z14 !s107 top_level.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Etop_level
+R1
+R3
+R7
+R2
+Z17 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+R4
+R5
+R6
+Z18 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+R8
+R9
+l0
+L79
+VbXnE>zSAIRAVS64@LSJ]I0
+!s100 RQ8TkNTEUeG_0@i2MTk0?2
+R10
+32
+!s110 1575246313
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R17
+R4
+R5
+R6
+R18
+DEx4 work 9 top_level 0 22 bXnE>zSAIRAVS64@LSJ]I0
+l1551
+L152
+VU6LS3eHfCX[b9E2VAAj_51
+!s100 e;W<aJ8mc7ZVfjUmj?V201
+R10
+32
+!s110 1575246314
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Etop_level_vhd_vec_tst
+Z19 w1575246300
+R5
+R6
+R0
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
+l0
+L31
+VCnKcalP:F=O<E`bU7H3hA1
+!s100 iQGcISbOlcXc`eIVOEfE03
+R10
+32
+Z22 !s110 1575246316
+!i10b 1
+Z23 !s108 1575246315.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Atop_level_arch
+R5
+R6
+Z26 DEx4 work 21 top_level_vhd_vec_tst 0 22 CnKcalP:F=O<E`bU7H3hA1
+l66
+L33
+Z27 Vj:dBc5I2L:IeAVGZOQY6D0
+Z28 !s100 CXAdYQ>o^QDo[eS==7oH<0
+R10
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R15
+R16
